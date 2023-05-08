@@ -294,11 +294,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 170,
+    "versionNumber": 171,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1683555120959
+    "lastModifiedOn": 1683555270937
   },
   "creationTag": {
     "versionNumber": 0,
@@ -308,7 +308,7 @@
     "lastModifiedOn": 1653525784144
   },
   "description": "In this demo, you will learn common data prep \u0026 blend techniques in DSS.\n\nGiven three datasets:  (`Company Assets`, `Company Liabilities`, and `Company Audit`) you will construct a flow that:\n- joins Assets with Liabilities,\n- cleans the combined dataset,\n- then compares it with the audit data to see if the datasets all reconcile.\n\nYou will then see how DSS enables you to split the output records into different datasets based on whether they are flagged or not during the reconciliation process.\n\nFinally, using the Multi-sheet Excel export plugin, you will generate a `Reconciliation Results` file that puts records that matched and records that were flagged on separate tabs within the same Excel file.",
-  "shortDesc": "This **Office of Finance: Asset \u0026 Liability Reconciliation** project demonstrates a common financial services reconciliation process using prep \u0026 blend techniques in DSS. (Copyright © 2022 [Aimpoint Digital](http://www.aimpointdigital.com))\nThe project *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION* was copied from *FINANCEASSETLIABILITYRECONCILIATION* by Justin Davis on Oct 06th 2022\nThe project *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION_V2* was copied from *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION* by hannah.chung on Oct 27th 2022\nThe project *COPYWHISTORICDATA* was copied from *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION_V2* by walid.elkara on Nov 18th 2022",
+  "shortDesc": "This **Office of Finance: Asset \u0026 Liability Reconciliation** project demonstrates a common financial services reconciliation process using prep \u0026 blend techniques in DSS. \nThe project *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION* was copied from *FINANCEASSETLIABILITYRECONCILIATION* by Justin Davis on Oct 06th 2022\nThe project *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION_V2* was copied from *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION* by hannah.chung on Oct 27th 2022\nThe project *COPYWHISTORICDATA* was copied from *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION_V2* by walid.elkara on Nov 18th 2022",
   "tags": [
     "Business Function:Accounting / Finance",
     "Industry:Cross-Vertical",
