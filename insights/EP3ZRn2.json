@@ -1,0 +1,356 @@
+{
+  "type": "chart",
+  "params": {
+    "datasetSmartName": "Assets_Liabilities_Equity_prep_by_Year",
+    "engineType": "LINO",
+    "refreshableSelection": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "def": {
+      "type": "stacked_columns",
+      "variant": "normal",
+      "name": "Total Assets By Type \u0026 Year",
+      "userEditedName": true,
+      "displayEchart": false,
+      "genericDimension0": [
+        {
+          "column": "Year",
+          "type": "NUMERICAL",
+          "numParams": {
+            "mode": "TREAT_AS_ALPHANUM",
+            "nbBins": 10,
+            "binSize": 100,
+            "emptyBinsMode": "ZEROS"
+          },
+          "maxValues": 100,
+          "generateOthersCategory": true,
+          "oneTickPerBin": false,
+          "filters": [],
+          "isA": "dimension",
+          "possibleSorts": [
+            {
+              "type": "NATURAL",
+              "label": "Natural ordering",
+              "sortAscending": true
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Sum of Goodwill, descending"
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 0,
+              "label": "Sum of Goodwill, ascending",
+              "sortAscending": true
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 1,
+              "label": "Sum of Cash, descending"
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 1,
+              "label": "Sum of Cash, ascending",
+              "sortAscending": true
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 2,
+              "label": "Sum of Accounts Receivable, descending"
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 2,
+              "label": "Sum of Accounts Receivable, ascending",
+              "sortAscending": true
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 3,
+              "label": "Sum of Fixed Assets, descending"
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 3,
+              "label": "Sum of Fixed Assets, ascending",
+              "sortAscending": true
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 4,
+              "label": "Sum of Inventories, descending"
+            },
+            {
+              "type": "AGGREGATION",
+              "measureIdx": 4,
+              "label": "Sum of Inventories, ascending",
+              "sortAscending": true
+            }
+          ],
+          "sort": {
+            "type": "NATURAL",
+            "label": "Natural ordering",
+            "sortAscending": true
+          }
+        }
+      ],
+      "genericDimension1": [],
+      "facetDimension": [],
+      "animationDimension": [],
+      "genericMeasures": [
+        {
+          "column": "Goodwill",
+          "function": "SUM",
+          "type": "NUMERICAL",
+          "displayed": true,
+          "isA": "measure",
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "computeMode": "NORMAL",
+          "computeModeDim": 0,
+          "multiplier": "Auto"
+        },
+        {
+          "column": "Cash",
+          "function": "SUM",
+          "type": "NUMERICAL",
+          "displayed": true,
+          "isA": "measure",
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "computeMode": "NORMAL",
+          "computeModeDim": 0,
+          "multiplier": "Auto"
+        },
+        {
+          "column": "Accounts Receivable",
+          "function": "SUM",
+          "type": "NUMERICAL",
+          "displayed": true,
+          "isA": "measure",
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "computeMode": "NORMAL",
+          "computeModeDim": 0,
+          "multiplier": "Auto"
+        },
+        {
+          "column": "Fixed Assets",
+          "function": "SUM",
+          "type": "NUMERICAL",
+          "displayed": true,
+          "isA": "measure",
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "computeMode": "NORMAL",
+          "computeModeDim": 0,
+          "multiplier": "Auto"
+        },
+        {
+          "column": "Inventories",
+          "function": "SUM",
+          "type": "NUMERICAL",
+          "displayed": true,
+          "isA": "measure",
+          "displayAxis": "axis1",
+          "displayType": "column",
+          "computeMode": "NORMAL",
+          "computeModeDim": 0,
+          "multiplier": "Auto"
+        }
+      ],
+      "xDimension": [],
+      "yDimension": [],
+      "uaXDimension": [],
+      "uaYDimension": [],
+      "uaSize": [],
+      "uaShape": [],
+      "uaColor": [],
+      "uaTooltip": [],
+      "groupDimension": [],
+      "xMeasure": [],
+      "yMeasure": [],
+      "colorMeasure": [],
+      "sizeMeasure": [],
+      "geometry": [],
+      "geoLayers": [
+        {
+          "geometry": [],
+          "colorOptions": {
+            "singleColor": "#2678B1",
+            "transparency": 0.75,
+            "colorPalette": "default",
+            "ccScaleMode": "NORMAL",
+            "customPalette": {
+              "id": "__dku_custom__",
+              "name": "Custom Palette",
+              "colors": [],
+              "values": [],
+              "fixedValues": false
+            },
+            "paletteType": "CONTINUOUS",
+            "quantizationMode": "NONE",
+            "numQuantizeSteps": 5,
+            "paletteMiddleValue": 0.0,
+            "customColors": {},
+            "heatDensityMapIntensity": 0.5,
+            "heatDensityMapRadius": 0.5
+          },
+          "uaColor": []
+        }
+      ],
+      "tooltipMeasures": [],
+      "boxplotBreakdownDim": [],
+      "boxplotValue": [],
+      "filters": [],
+      "axis1LogScale": false,
+      "axis2LogScale": false,
+      "includeZero": true,
+      "smoothing": true,
+      "showLegend": true,
+      "showXAxis": false,
+      "showInChartValues": false,
+      "showInChartLabels": true,
+      "strokeWidth": 1,
+      "fillOpacity": 0.6,
+      "showXAxisLabel": true,
+      "showYAxisLabel": true,
+      "yAxisNumberFormattingOptions": {
+        "multiplier": "Auto",
+        "prefix": "",
+        "suffix": ""
+      },
+      "xAxisNumberFormattingOptions": {
+        "multiplier": "Auto",
+        "prefix": "",
+        "suffix": ""
+      },
+      "displayXAxis": true,
+      "displayYAxis": true,
+      "hexbinRadius": 20,
+      "hexbinNumber": 20,
+      "hexbinRadiusMode": "NUM_HEXAGONS",
+      "yCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "xCustomExtent": {
+        "editMode": "AUTO",
+        "manualExtent": [
+          null,
+          null
+        ]
+      },
+      "chartHeight": 200,
+      "singleXAxis": true,
+      "multiTooltips": false,
+      "animationFrameDuration": 3000,
+      "animationRepeat": true,
+      "colorOptions": {
+        "singleColor": "#2678B1",
+        "transparency": 0.75,
+        "colorPalette": "default",
+        "ccScaleMode": "NORMAL",
+        "customPalette": {
+          "id": "__dku_custom__",
+          "name": "Custom Palette",
+          "colors": [],
+          "values": [],
+          "fixedValues": false
+        },
+        "paletteType": "CONTINUOUS",
+        "quantizationMode": "NONE",
+        "numQuantizeSteps": 5,
+        "paletteMiddleValue": 0.0,
+        "customColors": {},
+        "heatDensityMapIntensity": 0.5,
+        "heatDensityMapRadius": 0.5
+      },
+      "bubblesOptions": {
+        "defaultRadius": 5.0,
+        "singleShape": "FILLED_CIRCLE"
+      },
+      "computeMode": "NORMAL",
+      "xAxisMode": "NORMAL",
+      "yAxisMode": "NORMAL",
+      "pieOptions": {
+        "donutHoleSize": 54.0
+      },
+      "scatterOptions": {
+        "equalScales": false,
+        "identityLine": false
+      },
+      "mapOptions": {
+        "tilesLayer": "cartodb-positron",
+        "lockSquareGrid": false
+      },
+      "mapGridOptions": {
+        "gridLonDeg": 0.5,
+        "gridLatDeg": 0.5
+      },
+      "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAABTZJREFUeF7tXX9oVWUYft+71WLNJRuo1GwyjMLubmEF0yJsragUFOfuglbbpBtaoC60TWx4l1TOKJkp9GvMzeCaPxFm7Y+6UYEbi1C83huki60SttRY161o7ZwvBiZL/M69e+/pdjo+/ut93vOd5/ne932+95zDmPDP1Qywq+8ON0cQ2OWbAAJDYJcz4PLbQwZDYJcz4PLbQwZDYJcz4PLbQwY7TGBfh29GKks6+czJnyfjIXAqbP4L2OL24jKl1CZJaGYOR6ojWyCwhL00Yer3Pbo623NdsfRym1ccfR4CS9lLA061lq6ikXMPiS7FmRd4zXEILCIvTSAVvKmMlCkq0aQ4zK/EUaLTpJXoMhBYRNv/BwSBHaDVvLZ5d0uXwQaPRJ+NntHhIbCUWRtx3nZvKykqkoRU4yoAgSXMpRHTcdi/Q3q50yoe2rK8qxsZLGUwDTi1tTBEypBNnPKLGvm5L4/plnnhzQcrc0dPV0pu409Pdl/2y30bcA6WsDcJozZPayWSlWhiDnAwru3BB7uHyphkkyzFHC4vmXkNHJNUiq8iMSmrPQCBU8yQVOG+Nl+JyebrkjhM3BupidRDYAl7acJs2PtIxR+sSqWX21H56WoILGXvEs67x7tQGsIcN3+L1cZOaJ3ouw9U0O/DFbL4PMrrIrVW2LO7ln0gi000fGNR6M6atz7T4V3Tg727vS1E5JMQZSqzzlLgYG4JKSUq0UTUy00XLUv0oZ5B8Tl4XHkC/oUz/nuT5evweQ3DKJAIMIGJ1ka7rLCf7F/xWlZm5nRJ/FO/Dny1pqY7pD9LQuC/udE+8C/dc8/888bYdokAGUzfHq+OrLLsY035O0mZsueeWVnreePg17r4379TWzXrl2OPS9ZucsZYzsaYZYl2RQZ/8d59/pvzblskIclQY/E7Kg40WBuV3BYiJSrRxGYdB0e1Pfhgz2AJKxKVaEXcW75gpvtLtArmeEnx2xKBiTjGTfEXrLDf7NveJotNlDPS13X7yp0faY0KBL5MjbZEn2lbt+xc3r3lUhEWLK162gp7qHtQbLLGzfE6//0FyOArCJ7SJOvFD08sueuWvCqRwMxG9aLZT1lh28I/dnhYXS+JHxsaDjU/6TuiwzYeiPrn5k9bLoltmOriyocLA1bY9s9/2CuJPYHpPXv+/V1V87XHpFcPf1dTMP2GxyTxxww1FCgrXDsZq83g2es7vZ4MkpVoRbGBbUssS/SchqMtSsl6MJtc1//GYm0Gz3np4xKVwiSrv3mxZQ8urO8Uz6INNgI/bV2qPSbd2tBZxoqEr+x4wgPbnkhuFg2B9TkEgZHB2t2BDE6i+aBEa0hSKNEJt8/E0yT04EQ0oUSjRMNFX30PwEUTEXowejDOwZf2AAYdVyQDTFYigzXx/zBZMFkwWTBZ2iyAyYLJgsmCybp6FsBkwWQRnibBRcNFw0XDRcNFJ9MOJ/8GjwsTMwaTlZgjTLIsOMIbHUlsIAw6MOjAoAODDgw68F60phJi0IFBBwYdGHRg0IFBRxInin/8BIOOxIxh0JGYIww6MOggQg9GD0YPTqZa4mHD1Fi6tnqwh5qnRs/lX/cn9QG4qeZK4rPiTQk/ACezURSb+VRSH58pmiWJb3iMtQk/ADepThKbyNOT9AfgsgsA5TQG8IexnKaIzeuBwDYT6rRwENhpiti8HghsM6FOCweBnaaIzeuBwDYT6rRwENhpiti8HghsM6FOCweBnaaIzeuBwDYT6rRwENhpiti8HghsM6FOCweBnaaIzev5CyTTiauPOX+eAAAAAElFTkSuQmCC",
+      "disableSafetyLimits": false,
+      "useLiveProcessingIfAvailable": true,
+      "legendPlacement": "OUTER_RIGHT",
+      "pivotMeasureDisplayMode": "ROWS",
+      "pivotDisplayTotals": {
+        "subTotals": {
+          "rows": true,
+          "columns": true
+        },
+        "grandTotal": {
+          "row": true,
+          "column": true
+        }
+      }
+    },
+    "maxDataBytes": 157286400
+  },
+  "owner": "walid.elkara@dataiku.com",
+  "listed": false,
+  "name": "Total Assets By Type \u0026 Year on Assets_Liabilities_Equity_prep_by_Year",
+  "dashboardCreationId": "z92WRiL",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "walid.elkara@dataiku.com"
+    },
+    "lastModifiedOn": 1671024684918
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "walid.elkara@dataiku.com"
+    },
+    "lastModifiedOn": 1671024684918
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

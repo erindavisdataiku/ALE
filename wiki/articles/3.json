@@ -1,0 +1,36 @@
+{
+  "name": "Detailed Talk Track",
+  "layout": "WIKI_ARTICLE",
+  "attachments": [
+    {
+      "attachmentType": "FILE",
+      "smartId": "cMkDWfMdLuz8",
+      "details": {
+        "objectDisplayName": "Audit_111022.csv",
+        "size": 3483,
+        "mimeType": "text/csv"
+      },
+      "attachedBy": "walid.elkara@dataiku.com",
+      "attachedOn": 1670877781392
+    }
+  ],
+  "versionTag": {
+    "versionNumber": 9,
+    "lastModifiedBy": {
+      "login": "walid.elkara@dataiku.com"
+    },
+    "lastModifiedOn": 1670882229155
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "walid.elkara@dataiku.com"
+    },
+    "lastModifiedOn": 1670871755733
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

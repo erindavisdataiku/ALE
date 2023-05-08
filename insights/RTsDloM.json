@@ -1,0 +1,29 @@
+{
+  "type": "filters",
+  "params": {
+    "datasetSmartName": "Assets_Liabilities_Equity_prep"
+  },
+  "owner": "hannah.chung@aimpointdigital.com",
+  "listed": false,
+  "name": "Filters on Assets_Liabilities_Equity_prep",
+  "dashboardCreationId": "z92WRiL",
+  "versionTag": {
+    "versionNumber": 11,
+    "lastModifiedBy": {
+      "login": "walid.elkara@dataiku.com"
+    },
+    "lastModifiedOn": 1671024899464
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "hannah.chung@aimpointdigital.com"
+    },
+    "lastModifiedOn": 1669057985888
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

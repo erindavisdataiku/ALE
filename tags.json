@@ -1,0 +1,29 @@
+{
+  "tags": {
+    "Business Function:Accounting / Finance": {},
+    "Persona:Data / Business Analyst": {},
+    "Pain Point:Lack of Visibility \u0026 Control": {},
+    "Feature:Scenarios": {},
+    "Feature:Metrics \u0026 Checks": {},
+    "Pain Point:Data Access / Data Quality": {},
+    "demo": {},
+    "Data Source:Snowflake": {},
+    "duplicated": {
+      "color": "#3A85AD"
+    },
+    "Pain Point:Lack of O16n \u0026 Business Impact": {},
+    "office of finance": {},
+    "Feature:Flow": {},
+    "Feature:Charts": {},
+    "Feature:Dataiku Applications": {},
+    "imported": {
+      "color": "#263238"
+    },
+    "Feature:Automation": {},
+    "Industry:Cross-Vertical": {},
+    "Feature:Dashboards": {},
+    "Persona:Line of Business Leader": {},
+    "Feature:Plugins": {},
+    "finance": {}
+  }
+}

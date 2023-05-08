@@ -1,0 +1,44 @@
+{
+  "name": "Prep, Blend, \u0026 Reconcile",
+  "color": "#8C2DA7",
+  "items": [
+    {
+      "objectId": "compute_Company_Assets_Liabilitiesjoined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Assets_Liabilities_Equity",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Assets_Liabilities_Equity_prep",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Assets_Liabilities_Equity_prep",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Audit_Assets_Liabilities_Equity",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Audit_Assets_Liabilities_Equity",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Audit",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Audit",
+      "objectType": "RECIPE"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

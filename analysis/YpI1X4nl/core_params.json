@@ -1,0 +1,133 @@
+{
+  "inputDatasetSmartName": "Audit_Assets_Liabilities_Equity",
+  "script": {
+    "steps": [],
+    "maxProcessedMemTableBytes": -1,
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "columnWidthsByName": {},
+    "columnUseScientificNotationByName": {},
+    "coloring": {
+      "scheme": "MEANING_AND_STATUS",
+      "individualColumns": [],
+      "valueColoringMode": "HASH"
+    },
+    "sorting": [],
+    "analysisColumnData": {
+      "BU ID": {
+        "meaning": "Text"
+      },
+      "Inventories": {
+        "meaning": "LongMeaning"
+      },
+      "Goodwill": {
+        "meaning": "LongMeaning"
+      },
+      "Retained Earnings": {
+        "meaning": "LongMeaning"
+      },
+      "Accounts Receivable": {
+        "meaning": "LongMeaning"
+      },
+      "Shareholder Investment": {
+        "meaning": "LongMeaning"
+      },
+      "Cash": {
+        "meaning": "LongMeaning"
+      },
+      "ST Debt": {
+        "meaning": "LongMeaning"
+      },
+      "Accounts Payable": {
+        "meaning": "LongMeaning"
+      },
+      "Fixed Assets": {
+        "meaning": "LongMeaning"
+      },
+      "Accrued Expenses": {
+        "meaning": "LongMeaning"
+      },
+      "Total Liabilities \u0026 Equity": {
+        "meaning": "LongMeaning"
+      },
+      "Total Assets": {
+        "meaning": "LongMeaning"
+      },
+      "LT Debt": {
+        "meaning": "LongMeaning"
+      }
+    },
+    "explorationSampling": {
+      "selection": {
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "timeout": -1,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "maxRecords": 10000,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "vizSampling": {
+      "selection": {
+        "useMemTable": false,
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "partitionSelectionMethod": "ALL",
+        "latestPartitionsN": 1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "samplingMethod": "FULL",
+        "maxRecords": -1,
+        "targetRatio": 0.02,
+        "withinFirstN": -1,
+        "maxReadUncompressedBytes": -1
+      },
+      "autoRefreshSample": false,
+      "_refreshTrigger": 0
+    },
+    "exploreUIParams": {},
+    "globalSearchQuery": "",
+    "explorationFilters": [],
+    "previewMode": "ALL_ROWS"
+  },
+  "charts": [],
+  "name": "Quick modeling of Total Assets on Audit_Assets_Liabilities_Equity",
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "welkara"
+    },
+    "lastModifiedOn": 1675979633068
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "welkara"
+    },
+    "lastModifiedOn": 1675979633068
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

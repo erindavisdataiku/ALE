@@ -1,0 +1,40 @@
+{
+  "name": "Inputs: Assets, Liabilities, \u0026 Equity",
+  "color": "#087ABF",
+  "items": [
+    {
+      "objectId": "compute_Liabilities_and_Equity",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_Assets",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Liabilities_and_Equity",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Assets",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "QGGgOlvG",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "Assets_111022_local",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Liabilities_and_Equity_111022_local",
+      "objectType": "DATASET"
+    }
+  ],
+  "shared": [],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

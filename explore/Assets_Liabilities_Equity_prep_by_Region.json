@@ -1,0 +1,377 @@
+{
+  "charts": [
+    {
+      "copySelectionFromScript": true,
+      "def": {
+        "animationDimension": [],
+        "animationFrameDuration": 3000,
+        "animationRepeat": true,
+        "axis1LogScale": false,
+        "axis2LogScale": false,
+        "boxplotBreakdownDim": [],
+        "boxplotValue": [],
+        "bubblesOptions": {
+          "defaultRadius": 5.0,
+          "singleShape": "FILLED_CIRCLE"
+        },
+        "chartHeight": 200,
+        "colorMeasure": [],
+        "colorOptions": {
+          "ccScaleMode": "NORMAL",
+          "colorPalette": "default",
+          "customColors": {},
+          "customPalette": {
+            "colors": [],
+            "fixedValues": false,
+            "id": "__dku_custom__",
+            "name": "Custom Palette",
+            "values": []
+          },
+          "heatDensityMapIntensity": 0.5,
+          "heatDensityMapRadius": 0.5,
+          "numQuantizeSteps": 5,
+          "paletteMiddleValue": 0.0,
+          "paletteType": "CONTINUOUS",
+          "quantizationMode": "NONE",
+          "singleColor": "#2678B1",
+          "transparency": 0.75
+        },
+        "computeMode": "NORMAL",
+        "disableSafetyLimits": false,
+        "displayXAxis": true,
+        "displayYAxis": true,
+        "facetDimension": [],
+        "fillOpacity": 0.6,
+        "filters": [
+          {
+            "active": true,
+            "allValuesInSample": false,
+            "column": "Category",
+            "columnType": "ALPHANUM",
+            "excludeOtherValues": false,
+            "excludedValues": {
+              "Accounts Payable": true,
+              "Accounts Receivable": true,
+              "Accrued Expenses": true,
+              "Cash": true,
+              "Fixed Assets": true,
+              "Goodwill": true,
+              "Inventories": true,
+              "LT Debt": true,
+              "Retained Earnings": true,
+              "ST Debt": true,
+              "Shareholder Investment": true,
+              "Total Equity": true,
+              "Total Liabilities": true,
+              "Year": true
+            },
+            "explicitExclude": false,
+            "filterType": "ALPHANUM_FACET",
+            "isA": "filter",
+            "isAGlobalFilter": false
+          }
+        ],
+        "genericDimension0": [
+          {
+            "column": "Category",
+            "filters": [],
+            "generateOthersCategory": true,
+            "isA": "dimension",
+            "maxValues": 20,
+            "multiplier": "Auto",
+            "numParams": {
+              "emptyBinsMode": "ZEROS"
+            },
+            "oneTickPerBin": false,
+            "possibleSorts": [
+              {
+                "label": "Natural ordering",
+                "sortAscending": true,
+                "type": "NATURAL"
+              },
+              {
+                "label": "Average of US_Value_sum, descending",
+                "measureIdx": 0,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Average of US_Value_sum, ascending",
+                "measureIdx": 0,
+                "sortAscending": true,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Average of CA_Value_sum, descending",
+                "measureIdx": 1,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Average of CA_Value_sum, ascending",
+                "measureIdx": 1,
+                "sortAscending": true,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Average of MX_Value_sum, descending",
+                "measureIdx": 2,
+                "type": "AGGREGATION"
+              },
+              {
+                "label": "Average of MX_Value_sum, ascending",
+                "measureIdx": 2,
+                "sortAscending": true,
+                "type": "AGGREGATION"
+              }
+            ],
+            "prefix": "",
+            "sort": {
+              "label": "Natural ordering",
+              "sortAscending": true,
+              "type": "NATURAL"
+            },
+            "suffix": "",
+            "type": "ALPHANUM"
+          }
+        ],
+        "genericDimension1": [],
+        "genericMeasures": [
+          {
+            "colorRules": [],
+            "column": "US_Value_sum",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "AVG",
+            "isA": "measure",
+            "labelPosition": "BOTTOM",
+            "multiplier": "Auto",
+            "prefix": "",
+            "showDisplayLabel": true,
+            "suffix": "",
+            "type": "NUMERICAL"
+          },
+          {
+            "colorRules": [],
+            "column": "CA_Value_sum",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "AVG",
+            "isA": "measure",
+            "labelPosition": "BOTTOM",
+            "multiplier": "Auto",
+            "prefix": "",
+            "showDisplayLabel": true,
+            "suffix": "",
+            "type": "NUMERICAL"
+          },
+          {
+            "colorRules": [],
+            "column": "MX_Value_sum",
+            "computeMode": "NORMAL",
+            "computeModeDim": 0,
+            "displayAxis": "axis1",
+            "displayType": "column",
+            "displayed": true,
+            "function": "AVG",
+            "isA": "measure",
+            "labelPosition": "BOTTOM",
+            "multiplier": "Auto",
+            "prefix": "",
+            "showDisplayLabel": true,
+            "suffix": "",
+            "type": "NUMERICAL"
+          }
+        ],
+        "geoLayers": [
+          {
+            "colorOptions": {
+              "ccScaleMode": "NORMAL",
+              "colorPalette": "default",
+              "customColors": {},
+              "customPalette": {
+                "colors": [],
+                "fixedValues": false,
+                "id": "__dku_custom__",
+                "name": "Custom Palette",
+                "values": []
+              },
+              "heatDensityMapIntensity": 0.5,
+              "heatDensityMapRadius": 0.5,
+              "numQuantizeSteps": 5,
+              "paletteMiddleValue": 0.0,
+              "paletteType": "CONTINUOUS",
+              "quantizationMode": "NONE",
+              "singleColor": "#2678B1",
+              "transparency": 0.75
+            },
+            "geometry": [],
+            "uaColor": []
+          }
+        ],
+        "geometry": [],
+        "groupDimension": [],
+        "hexbinNumber": 20,
+        "hexbinRadius": 20,
+        "hexbinRadiusMode": "NUM_HEXAGONS",
+        "includeZero": true,
+        "legendPlacement": "OUTER_RIGHT",
+        "mapGridOptions": {
+          "gridLatDeg": 0.5,
+          "gridLonDeg": 0.5
+        },
+        "mapOptions": {
+          "lockSquareGrid": false,
+          "tilesLayer": "cartodb-positron"
+        },
+        "multiTooltips": false,
+        "name": "Avg of US_Value_sum by Category",
+        "pieOptions": {
+          "donutHoleSize": 54.0
+        },
+        "pivotDisplayTotals": {
+          "grandTotal": {
+            "column": true,
+            "row": true
+          },
+          "subTotals": {
+            "columns": true,
+            "rows": true
+          }
+        },
+        "pivotMeasureDisplayMode": "ROWS",
+        "scatterOptions": {
+          "equalScales": false,
+          "identityLine": false
+        },
+        "showInChartLabels": true,
+        "showInChartValues": false,
+        "showLegend": true,
+        "showXAxis": false,
+        "showXAxisLabel": true,
+        "showYAxisLabel": true,
+        "singleXAxis": true,
+        "sizeMeasure": [],
+        "smoothing": true,
+        "strokeWidth": 1,
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAvBJREFUeF7t3L1rU1EcxvFz82IoDbYIQrrYulUy2LWdqnapoCRdBRf7JwhxqhWKQrt011lwNkhRKHTpH1DQToJYcVEEA47mFDrGc+89Oec+TYPfrjnn3pvn93xu3qCJGfHftU53LzGm5rqMfr+0frJz9/N5XuLs47eLppw8d53TWnvydfvew/O8nthzJbEHiN3PgGMTzN7PgAfyQXDBhUNwwYEOHA7BCNY2DMHafBGMYG3DEKzNF8EI1jYMwdp8EYxgbcMQrM0XwQjWNgzB2nwRjGBtwxCszRfBCNY2DMHafBGMYG3DEKzNF8EI1jYMwdp8EYxgbcMQrM0XwQjWNgzB2nwRjGBtwxCszRfBCNY2DMHafBGMYG3DEKzNF8EI1jYMwdp8EYxgbcMQrM0XwQjWNgzB2nwRjGBtwxCszRfBCNY2DMHafBGMYG3DEKzNF8EI1jYMwdp8EYxgbcMQrM0XwQjWNgzB2nwRjGBtwxCszfdCC95aXfhRv1SpuiKwxu6uLc0cFB1P1n98b9Qnfj250yylnbO91GgXfT2xx7v4A65VrjoHbO3mSAa80rziLpyxa4uN27EDKXo/Ax7iNfhMMAMeroNZr8Fnt2gEDxfowGoEIziqQLmbEZwbUdQCBCM4qkC5mxGcG1HUAgQjOKpAuZsRnBtR1IKxFXzz00b3+rc3R2nPPnn6+0NIMrnfZKV+Dra2/X7+Reo5+9WPybOf30OuKWbP2A54+bD1Zbp3POd88ol9mWz2XocEEzXgvfmMPKsPGPDARLK+6GDAfvVFcGFvsqxtI/jf1oW+yUIwgnkNNsZwi+YW7XcrCF3FLTo0Ob99CEawX1NCVyE4NDm/fQhGsF9TQlchODQ5v30IRrBfU0JXITg0Ob99Ixc82+m+SrvUrdWFy/Vaped6fPmwVZ7uHf9N+bFhP/LHhkeu485MTUx2bjX/uB4rlfrm/rsbGalXN/7LHxv8esiq0ARGLjj0wtnnlwAD9stpbFedAuZKAZzKCK/BAAAAAElFTkSuQmCC",
+        "tooltipMeasures": [],
+        "type": "grouped_columns",
+        "uaColor": [],
+        "uaShape": [],
+        "uaSize": [],
+        "uaTooltip": [],
+        "uaXDimension": [],
+        "uaYDimension": [],
+        "useLiveProcessingIfAvailable": true,
+        "userEditedName": false,
+        "variant": "normal",
+        "xAxisMode": "NORMAL",
+        "xAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "xCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "xDimension": [],
+        "xMeasure": [],
+        "yAxisMode": "NORMAL",
+        "yAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "yCustomExtent": {
+          "editMode": "AUTO",
+          "manualExtent": [
+            null,
+            null
+          ]
+        },
+        "yDimension": [],
+        "yMeasure": []
+      },
+      "engineType": "LINO",
+      "maxDataBytes": 157286400
+    }
+  ],
+  "interactiveSearch": {
+    "savedQueries": []
+  },
+  "script": {
+    "analysisColumnData": {},
+    "coloring": {
+      "individualColumns": [],
+      "scheme": "MEANING_AND_STATUS",
+      "valueColoringMode": "HASH"
+    },
+    "columnUseScientificNotationByName": {},
+    "columnWidthsByName": {},
+    "columnsSelection": {
+      "mode": "ALL"
+    },
+    "explorationFilters": [],
+    "explorationSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": 10000,
+        "maxRecordsForDisplay": -1,
+        "maxStoredBytes": 104857600,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "HEAD_SEQUENTIAL",
+        "targetRatio": 0.02,
+        "timeout": -1,
+        "withinFirstN": -1
+      }
+    },
+    "exploreUIParams": {},
+    "globalSearchQuery": "",
+    "maxProcessedMemTableBytes": -1,
+    "previewMode": "ALL_ROWS",
+    "sorting": [],
+    "steps": [],
+    "vizSampling": {
+      "_refreshTrigger": 0,
+      "autoRefreshSample": false,
+      "selection": {
+        "filter": {
+          "distinct": false,
+          "enabled": false
+        },
+        "latestPartitionsN": 1,
+        "maxReadUncompressedBytes": -1,
+        "maxRecords": -1,
+        "ordering": {
+          "enabled": false,
+          "rules": []
+        },
+        "partitionSelectionMethod": "ALL",
+        "samplingMethod": "FULL",
+        "targetRatio": 0.02,
+        "useMemTable": false,
+        "withinFirstN": -1
+      }
+    }
+  }
+}

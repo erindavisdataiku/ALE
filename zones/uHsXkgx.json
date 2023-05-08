@@ -1,0 +1,61 @@
+{
+  "name": "Reconciliation Outputs",
+  "color": "#4B8021",
+  "items": [
+    {
+      "objectId": "Reconciliation_Matches",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "Reconciliation_Flagged",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "split_Audit_Assets_Liabilities_Equity",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "0h9QUF1p",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_0h9QUF1p",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_Reconciled_Records_Log",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Reconciled_Records_Add_Dates",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Reconciled_Records_Add_Dates_copy_partitions",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Reconciled_Records_Add_Dates_copy_partitions",
+      "objectType": "DATASET"
+    },
+    {
+      "objectId": "VIAuG3Ey",
+      "objectType": "MANAGED_FOLDER"
+    },
+    {
+      "objectId": "compute_VIAuG3Ey",
+      "objectType": "RECIPE"
+    }
+  ],
+  "shared": [
+    {
+      "objectId": "Audit_Assets_Liabilities_Equity",
+      "objectType": "DATASET"
+    }
+  ],
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "type": "CustomCode_to-excel",
+  "neverRecomputeExistingPartitions": false,
+  "optionalDependencies": false,
+  "params": {
+    "customConfig": {
+      "output_workbook_name": "Recon_output"
+    },
+    "containerSelection": {
+      "containerMode": "INHERIT"
+    }
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "redispatchPartitioning": false,
+  "maxRunningActivities": 0,
+  "variables": {},
+  "dkuProperties": [],
+  "inputs": {
+    "input_dataset": {
+      "items": [
+        {
+          "ref": "Reconciliation_Matches",
+          "deps": []
+        },
+        {
+          "ref": "Reconciliation_Flagged",
+          "deps": []
+        }
+      ]
+    }
+  },
+  "outputs": {
+    "folder": {
+      "items": [
+        {
+          "ref": "0h9QUF1p",
+          "appendMode": false
+        }
+      ]
+    }
+  },
+  "labels": [],
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "justin.davis"
+    },
+    "lastModifiedOn": 1664999266700
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "justin.davis"
+    },
+    "lastModifiedOn": 1664999259370
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}

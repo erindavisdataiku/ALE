@@ -1,0 +1,119 @@
+{
+  "projectExportManifest": {
+    "exportUploads": true,
+    "exportAllInputDatasets": true,
+    "exportAllDatasets": false,
+    "exportManagedFS": false,
+    "exportAnalysisModels": false,
+    "exportSavedModels": false,
+    "exportModelEvaluationStores": false,
+    "exportProjectResources": false,
+    "exportLabelingTasks": false,
+    "exportManagedFolders": false,
+    "exportAllInputManagedFolders": true,
+    "exportInsightsData": false,
+    "includedDatasetsData": [],
+    "includedSavedModels": [],
+    "includedManagedFolders": [],
+    "includedModelEvaluationStores": [],
+    "includedCodeStudios": [],
+    "includedLabelingTasks": [],
+    "exportGitRepository": false
+  },
+  "instanceFeatures": {
+    "showFlowNavLink": false,
+    "showLabNavLink": false,
+    "showCodeNavLink": false,
+    "showSwitchToProjectViewButton": true,
+    "showVersionControlFeatures": false
+  },
+  "useAppHomepage": true,
+  "homepageSections": [
+    {
+      "sectionTitle": "Upload Audit File",
+      "sectionText": "",
+      "tiles": [
+        {
+          "datasetName": "Audit_Local",
+          "behavior": "INLINE_UPLOAD_ONLY",
+          "type": "UPLOAD_DATASET_SET_FILE",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Reconcile All Records",
+      "tiles": [
+        {
+          "scenarioId": "BATCH_AUTO",
+          "buttonText": "Reconcile",
+          "type": "SCENARIO_RUN",
+          "prompt": "Run reconciliation flow"
+        }
+      ]
+    },
+    {
+      "sectionTitle": "Flagged Rows",
+      "tiles": [
+        {
+          "dashboardId": "z92WRiL",
+          "type": "DASHBOARD_LINK"
+        },
+        {
+          "datasetName": "Reconciliation_Flagged",
+          "exportParams": {
+            "destinationType": "DOWNLOAD",
+            "temporaryFileBehavior": "AUTO",
+            "originatingOptionId": "excel",
+            "format": {
+              "type": "excel",
+              "params": {
+                "xlsx": true,
+                "preserveNumberFormatting": false,
+                "parseDatesToISO": false,
+                "skipRowsBeforeHeader": 0,
+                "parseHeaderRow": false,
+                "skipRowsAfterHeader": 0
+              }
+            },
+            "destinationDatasetProjectKey": "OFFICEOFFINANCEASSETLIABILITYRECONCILIATION",
+            "destinationDatasetConnection": "filesystem_managed",
+            "overwriteDestinationDataset": false,
+            "applyExplorationFilters": false,
+            "selection": {
+              "useMemTable": false,
+              "filter": {
+                "distinct": false,
+                "enabled": false
+              },
+              "partitionSelectionMethod": "ALL",
+              "selectedPartitions": [],
+              "latestPartitionsN": 1,
+              "ordering": {
+                "enabled": false,
+                "rules": []
+              },
+              "samplingMethod": "FULL",
+              "maxRecords": 100000,
+              "targetRatio": 0.02,
+              "withinFirstN": -1,
+              "maxReadUncompressedBytes": -1
+            }
+          },
+          "type": "DOWNLOAD_DATASET",
+          "prompt": "Download Flagged Rows Table"
+        }
+      ]
+    }
+  ],
+  "label": "Office of Finance: Asset \u0026 Liability Reconciliation",
+  "shortDesc": "The template *Office of Finance: Asset \u0026 Liability Reconciliation* was created by Administrator on Oct 12th 2022",
+  "tags": [],
+  "imgPattern": 8,
+  "showInitials": false,
+  "instantiationPermission": "USE_APP_MASTER_PERMISSIONS",
+  "limitedVisibilityEnabled": "INHERIT",
+  "accessRequestsEnabled": "INHERIT",
+  "allowedMissingConnections": [],
+  "allowedMissingCodeEnvs": []
+}

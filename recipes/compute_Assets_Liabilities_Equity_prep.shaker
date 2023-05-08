@@ -1,0 +1,229 @@
+{
+  "columnsSelection": {
+    "mode": "ALL"
+  },
+  "explorationSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": 10000,
+      "maxRecordsForDisplay": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "maxStoredBytes": 104857600,
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "timeout": -1
+    },
+    "autoRefreshSample": false
+  },
+  "explorationFilters": [],
+  "origin": "PREPARE_RECIPE",
+  "exploreUIParams": {
+    "autoRefresh": true
+  },
+  "steps": [
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "comment": "First two digits of BU ID represents the region code",
+      "type": "CreateColumnWithGREL",
+      "params": {
+        "expression": "substring(val(\"BU ID\"),0,2)",
+        "column": "Region Code"
+      },
+      "alwaysShowComment": true
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "type": "FillEmptyWithValue",
+      "params": {
+        "columns": [],
+        "appliesTo": "ALL",
+        "value": "0"
+      },
+      "alwaysShowComment": false
+    },
+    {
+      "preview": false,
+      "mainColor": "#30c2ff",
+      "name": "Create Subtotals (Assets, Liabilities, Equity)",
+      "metaType": "GROUP",
+      "disabled": false,
+      "comment": "Formulas to create the subtotals for Assets, Liabilities, and Equities",
+      "steps": [
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "Cash + val(\"Accounts Receivable\") + Inventories + val(\"Fixed Assets\") + Goodwill",
+            "column": "Total Assets",
+            "errorColumn": ""
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "val(\"Accounts Payable\") + val(\"Accrued Expenses\") + val(\"ST Debt\") + val(\"LT Debt\")",
+            "column": "Total Liabilities"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "val(\"Shareholder Investment\") + val(\"Retained Earnings\")",
+            "column": "Total Equity"
+          },
+          "alwaysShowComment": false
+        },
+        {
+          "preview": false,
+          "metaType": "PROCESSOR",
+          "disabled": false,
+          "type": "CreateColumnWithGREL",
+          "params": {
+            "expression": "val(\"Total Liabilities\") + val(\"Total Equity\")",
+            "column": "Total Liabilities \u0026 Equity"
+          },
+          "alwaysShowComment": false
+        }
+      ],
+      "alwaysShowComment": true,
+      "secondaryColor": "#cae8f4"
+    },
+    {
+      "preview": false,
+      "metaType": "PROCESSOR",
+      "disabled": false,
+      "comment": "Ensures these total columns are at the front of the column set, with detail columns following",
+      "type": "ColumnReorder",
+      "params": {
+        "referenceColumn": "BU ID",
+        "columns": [
+          "Region Code",
+          "Total Assets",
+          "Total Liabilities",
+          "Total Equity",
+          "Total Liabilities \u0026 Equity"
+        ],
+        "reorderAction": "AFTER_COLUMN",
+        "appliesTo": "COLUMNS"
+      },
+      "alwaysShowComment": true
+    }
+  ],
+  "maxProcessedMemTableBytes": -1,
+  "previewMode": "ALL_ROWS",
+  "vizSampling": {
+    "_refreshTrigger": 0,
+    "selection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "latestPartitionsN": 1,
+      "maxRecords": -1,
+      "ordering": {
+        "rules": [],
+        "enabled": false
+      },
+      "withinFirstN": -1,
+      "partitionSelectionMethod": "ALL",
+      "targetRatio": 0.02,
+      "maxReadUncompressedBytes": -1,
+      "samplingMethod": "FULL"
+    },
+    "autoRefreshSample": false
+  },
+  "analysisColumnData": {
+    "Fixed Assets": {
+      "meaning": "LongMeaning"
+    },
+    "BU ID": {
+      "meaning": "Text"
+    },
+    "Accrued Expenses": {
+      "meaning": "LongMeaning"
+    },
+    "Inventories": {
+      "meaning": "LongMeaning"
+    },
+    "Goodwill": {
+      "meaning": "LongMeaning"
+    },
+    "Retained Earnings": {
+      "meaning": "LongMeaning"
+    },
+    "Accounts Receivable": {
+      "meaning": "LongMeaning"
+    },
+    "Shareholder Investment": {
+      "meaning": "LongMeaning"
+    },
+    "Cash": {
+      "meaning": "LongMeaning"
+    },
+    "ST Debt": {
+      "meaning": "LongMeaning"
+    },
+    "Accounts Payable": {
+      "meaning": "LongMeaning"
+    },
+    "LT Debt": {
+      "meaning": "LongMeaning"
+    }
+  },
+  "columnWidthsByName": {
+    "": 100,
+    "BU ID": 100,
+    "Inventories": 100,
+    "Total Liabilities": 143,
+    "Goodwill": 106,
+    "Retained Earnings": 143,
+    "Accounts Receivable": 158,
+    "Shareholder Investment": 180,
+    "Cash": 100,
+    "ST Debt": 100,
+    "Accounts Payable": 135,
+    "Fixed Assets": 134,
+    "Accrued Expenses": 135,
+    "total": 100,
+    "Region Code": 100,
+    "Year": 100,
+    "Total Liabilities \u0026 Equity": 210,
+    "Debt_Equity_Ratio": 169,
+    "Total Assets": 105,
+    "Total Equity": 134,
+    "LT Debt": 100
+  },
+  "sorting": [],
+  "globalSearchQuery": "",
+  "coloring": {
+    "scheme": "MEANING_AND_STATUS",
+    "individualColumns": [],
+    "valueColoringMode": "HASH"
+  }
+}

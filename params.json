@@ -1,0 +1,465 @@
+{
+  "dashboardAuthorizations": {
+    "allAuthorized": false,
+    "authorizations": [
+      {
+        "objectRef": {
+          "objectId": "0h9QUF1p",
+          "objectType": "MANAGED_FOLDER"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Reconciliation_Flagged",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Audit",
+          "objectType": "DATASET"
+        },
+        "modes": []
+      },
+      {
+        "objectRef": {
+          "objectId": "Assets_Liabilities_Equity_prep",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      },
+      {
+        "objectRef": {
+          "objectId": "Assets_Liabilities_Equity_prep_by_Year",
+          "objectType": "DATASET"
+        },
+        "modes": [
+          "READ"
+        ]
+      }
+    ]
+  },
+  "exposedObjects": {
+    "objects": []
+  },
+  "projectType": "REGULAR",
+  "projectAppType": "APP_TEMPLATE",
+  "hasSetupSection": false,
+  "bundleContainerSettings": {
+    "remapping": {
+      "connections": [],
+      "codeEnvs": []
+    },
+    "codeEnvsBehavior": {
+      "envImportSpecificationMode": "SPECIFIED",
+      "importTimeMode": "INSTALL_IF_MISS"
+    }
+  },
+  "bundleExporterSettings": {
+    "exportOptions": {
+      "exportUploads": false,
+      "exportManagedFS": false,
+      "exportAnalysisModels": false,
+      "exportSavedModels": false,
+      "exportManagedFolders": false,
+      "exportModelEvaluationStores": false,
+      "exportProjectResources": true,
+      "exportLabelingTasks": false,
+      "exportAllInputDatasets": false,
+      "exportAllDatasets": false,
+      "exportAllInputManagedFolders": false,
+      "exportGitRepository": false,
+      "exportInsightsData": false,
+      "useManualPluginsInfo": false,
+      "exportNotebooksWithOutputs": true,
+      "includedDatasetsData": [
+        {
+          "name": "Audit_Local",
+          "type": "UploadedFiles"
+        },
+        {
+          "name": "Assets_111022_local",
+          "type": "FilesInFolder"
+        }
+      ],
+      "includedSavedModels": [],
+      "includedModelEvaluationStores": [],
+      "includedManagedFolders": [
+        {
+          "id": "QGGgOlvG",
+          "name": "source_data"
+        },
+        {
+          "id": "0h9QUF1p",
+          "name": "Reconciliation_Output"
+        },
+        {
+          "id": "VIAuG3Ey",
+          "name": "BI Exports"
+        }
+      ],
+      "includedCodeStudios": [],
+      "includedLabelingTasks": [],
+      "shareAllInputDatasets": false,
+      "exportForeignObjectsReferences": true
+    }
+  },
+  "owner": "admin",
+  "permissionsVersion": "V2",
+  "permissions": [],
+  "additionalDashboardUsers": {
+    "users": []
+  },
+  "tutorialProject": false,
+  "settings": {
+    "flowAnchorSourcesAndSinks": true,
+    "flowDisplaySettings": {
+      "zonesGraphRenderingAlgorithm": "DOT_OLDRANK",
+      "zonesGraphConnectZones": true
+    },
+    "gitCommitMode": "AUTO",
+    "disableAutomaticTriggers": false,
+    "integrations": {
+      "integrations": []
+    },
+    "flowBuildSettings": {
+      "mergeSparkPipelines": false,
+      "pruneBeforeSparkPipelines": true,
+      "mergeSqlPipelines": false,
+      "pruneBeforeSqlPipelines": true
+    },
+    "sharingRequestsEnabled": "INHERIT",
+    "limitedVisibilityEnabled": "INHERIT",
+    "accessRequestsEnabled": "INHERIT",
+    "limitsSettings": {
+      "memSampleBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "shakerMemTableBytes": {
+        "soft": -1,
+        "hard": -1
+      },
+      "attachmentBytes": {
+        "soft": -1,
+        "hard": -1
+      }
+    },
+    "relocationSettings": {
+      "sqlLikeRecipesInitializationMode": "RESOLVED_TABLE_REFERENCES"
+    },
+    "recipeEnginesPreferences": {
+      "forbiddenEngines": [],
+      "enginesPreferenceOrder": [],
+      "forbiddenByRecipeType": {},
+      "preferenceByRecipeType": {}
+    },
+    "codeEnvs": {
+      "python": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "r": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      },
+      "julia": {
+        "mode": "INHERIT",
+        "preventOverride": false
+      }
+    },
+    "container": {
+      "containerMode": "INHERIT"
+    },
+    "datasetsCreationSettings": {
+      "useGlobal": true,
+      "preferedStorageFormats": "CSV_ESCAPING_NOGZIP_FORHIVE,CSV_EXCEL_GZIP,PARQUET_HIVE",
+      "virtualizable": false,
+      "allowUploadsWithoutConnection": true
+    },
+    "hiveEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "HIVECLI_LOCAL"
+    },
+    "sparkEngineCreationSettings": {
+      "useGlobal": true,
+      "executionEngine": "SPARK_SUBMIT",
+      "useGlobalMetastore": false
+    },
+    "impalaEngineCreationSettings": {
+      "useGlobal": true,
+      "streamMode": true
+    },
+    "wikiSettings": {
+      "promoted": false
+    },
+    "cluster": {
+      "clusterMode": "INHERIT"
+    },
+    "k8sCluster": {
+      "clusterMode": "INHERIT"
+    },
+    "virtualWebAppBackendSettings": {
+      "mode": "INHERIT",
+      "preventOverride": false,
+      "infra": {
+        "containerSelection": {
+          "containerMode": "INHERIT"
+        },
+        "overrideGlobalK8sExposition": false,
+        "exposition": {
+          "type": "local_process",
+          "params": {}
+        },
+        "scaling": {
+          "initialReplicas": 1,
+          "progressDeadlineSeconds": 600,
+          "hpa": false,
+          "hpaTargetCPUPercent": 0,
+          "hpaMetrics": [],
+          "hpaMinPods": 0,
+          "hpaMaxPods": 0,
+          "hpaAnnotations": []
+        },
+        "deploymentModifier": {
+          "config": {}
+        }
+      }
+    },
+    "dkuProperties": []
+  },
+  "name": "Office of Finance: Asset \u0026 Liability Reconciliation",
+  "imgPattern": 3,
+  "showInitials": false,
+  "metrics": {
+    "probes": [],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": []
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "versionTag": {
+    "versionNumber": 170,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1683555120959
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "justin.davis"
+    },
+    "lastModifiedOn": 1653525784144
+  },
+  "description": "In this demo, you will learn common data prep \u0026 blend techniques in DSS.\n\nGiven three datasets:  (`Company Assets`, `Company Liabilities`, and `Company Audit`) you will construct a flow that:\n- joins Assets with Liabilities,\n- cleans the combined dataset,\n- then compares it with the audit data to see if the datasets all reconcile.\n\nYou will then see how DSS enables you to split the output records into different datasets based on whether they are flagged or not during the reconciliation process.\n\nFinally, using the Multi-sheet Excel export plugin, you will generate a `Reconciliation Results` file that puts records that matched and records that were flagged on separate tabs within the same Excel file.",
+  "shortDesc": "This **Office of Finance: Asset \u0026 Liability Reconciliation** project demonstrates a common financial services reconciliation process using prep \u0026 blend techniques in DSS. (Copyright © 2022 [Aimpoint Digital](http://www.aimpointdigital.com))\nThe project *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION* was copied from *FINANCEASSETLIABILITYRECONCILIATION* by Justin Davis on Oct 06th 2022\nThe project *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION_V2* was copied from *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION* by hannah.chung on Oct 27th 2022\nThe project *COPYWHISTORICDATA* was copied from *OFFICEOFFINANCEASSETLIABILITYRECONCILIATION_V2* by walid.elkara on Nov 18th 2022",
+  "tags": [
+    "Business Function:Accounting / Finance",
+    "Industry:Cross-Vertical",
+    "Persona:Data / Business Analyst",
+    "Persona:Line of Business Leader",
+    "Pain Point:Data Access / Data Quality",
+    "Pain Point:Lack of O16n \u0026 Business Impact",
+    "Pain Point:Lack of Visibility \u0026 Control",
+    "Data Source:Snowflake",
+    "Feature:Automation",
+    "Feature:Dashboards",
+    "Feature:Dataiku Applications",
+    "Feature:Metrics \u0026 Checks",
+    "Feature:Plugins",
+    "Feature:Scenarios",
+    "Feature:Flow",
+    "imported"
+  ],
+  "customFields": {
+    "gdpr_forbid_dataset_sharing": false,
+    "gdpr_forbid_dataset_export": false,
+    "gdpr_forbid_model_creation": false,
+    "gdpr_forbid_uploaded_datasets": false
+  },
+  "checklists": {
+    "checklists": [
+      {
+        "title": "Your new project\u0027s Todo",
+        "createdOn": 0,
+        "items": [
+          {
+            "done": true,
+            "text": "Import datasets",
+            "createdOn": 1653525784145,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Join Assets \u0026 Liabilities by ID",
+            "createdOn": 1653525784145,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Prepare the combined Assets/Liabilities dataset",
+            "createdOn": 1653525784145,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Join Assets/Liabilities dataset with Audit data",
+            "createdOn": 1653525784145,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Flag records for discrepancies",
+            "createdOn": 1653530066274,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Output records to one Excel sheet with multiple tabs (Matched records \u0026 Discrepancies in separate tabs)",
+            "createdOn": 1653530098097,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Output detail dataset for records with discrepancies to support further research",
+            "createdOn": 1653530151912,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Create pivot of data by region for Regional Managers",
+            "createdOn": 1665016085605,
+            "createdBy": "justin.davis",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Charts",
+            "createdOn": 1665608714644,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Metrics",
+            "createdOn": 1665608718474,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Scenario with Email/Alert",
+            "createdOn": 1665608728276,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Wiki",
+            "createdOn": 1665608731154,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Data \u0026 Recipe Descriptions/Tags",
+            "createdOn": 1665608743291,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Flow Export",
+            "createdOn": 1665608747410,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": true,
+            "text": "Discussions",
+            "createdOn": 1665608750514,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Application Based or Time Based runs",
+            "createdOn": 1665608759599,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          },
+          {
+            "done": false,
+            "text": "Position excel multisheet plugin as a normal recipe for non-technical users",
+            "createdOn": 1665608789678,
+            "createdBy": "admin",
+            "stateChangedOn": 0
+          }
+        ]
+      }
+    ]
+  }
+}

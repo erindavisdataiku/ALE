@@ -1,0 +1,245 @@
+{
+  "centileShuffle": false,
+  "centileSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "preFilter": {
+    "uiData": {
+      "mode": "\u0026\u0026",
+      "$latestOperator": "\u0026\u0026",
+      "$filterOptions": "rules",
+      "conditions": [
+        {
+          "input": "Year",
+          "col": "BU ID",
+          "string": "2022",
+          "num": 0,
+          "operator": "\u003d\u003d [string]"
+        }
+      ]
+    },
+    "$status": {},
+    "distinct": false,
+    "enabled": true
+  },
+  "defaultOutputIndex": 1,
+  "seed": 1337,
+  "randomColumns": [],
+  "centileOrders": [],
+  "rangeSetTime": false,
+  "randomSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "randomColumnsSplits": [
+    {
+      "outputIndex": 0,
+      "share": 50
+    }
+  ],
+  "computedColumns": [],
+  "writeComputedColumnsInOutput": false,
+  "mode": "FILTERS",
+  "centileTDigest": false,
+  "valueSplits": [
+    {
+      "outputIndex": 0,
+      "caseSensitive": false,
+      "value": ""
+    }
+  ],
+  "rangeSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "conditions": []
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ],
+  "engineParams": {
+    "hive": {
+      "skipPrerunValidate": false,
+      "hiveconf": [],
+      "inheritConf": "default",
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2"
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "skipPrerunValidate": false,
+      "pipelineAllowMerge": true,
+      "useGlobalMetastore": false,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "mode": "AUTO",
+        "autoModeRepartitionInto": 10,
+        "map": {}
+      },
+      "overwriteOutputSchema": false,
+      "executionEngine": "SPARK_SUBMIT",
+      "sparkConfig": {
+        "inheritConf": "default",
+        "conf": []
+      }
+    }
+  },
+  "filterSplits": [
+    {
+      "filter": {
+        "uiData": {
+          "mode": "\u0026\u0026",
+          "$latestOperator": "\u0026\u0026",
+          "$filterOptions": "rules",
+          "conditions": [
+            {
+              "input": "Flag_Control_Recon",
+              "col": "Total Assets",
+              "$appliesTo": "value",
+              "string": "Y",
+              "num": 0,
+              "$label": "Contains",
+              "operator": "contains"
+            },
+            {
+              "input": "Flag_Balance_Recon",
+              "col": "Total Assets",
+              "$appliesTo": "value",
+              "string": "Y",
+              "num": 0,
+              "$label": "Contains",
+              "operator": "contains"
+            }
+          ]
+        },
+        "$status": {
+          "schema": {
+            "columns": [
+              {
+                "name": "Year",
+                "type": "string",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "Text",
+                "name": "BU ID",
+                "type": "string",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Total Assets",
+                "type": "bigint"
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Total Liabilities \u0026 Equity",
+                "type": "bigint"
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Cash",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Accounts Receivable",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Inventories",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Fixed Assets",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Goodwill",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Accounts Payable",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Accrued Expenses",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "ST Debt",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "LT Debt",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Shareholder Investment",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "meaning": "LongMeaning",
+                "name": "Retained Earnings",
+                "type": "bigint",
+                "maxLength": 4194304
+              },
+              {
+                "name": "Audit Total Assets",
+                "type": "double",
+                "maxLength": 4194304
+              },
+              {
+                "name": "Flag_Control_Recon",
+                "type": "string",
+                "maxLength": 4194304
+              },
+              {
+                "name": "Flag_Balance_Recon",
+                "type": "string",
+                "maxLength": 4194304
+              }
+            ]
+          }
+        },
+        "distinct": false,
+        "enabled": true
+      },
+      "outputIndex": 0
+    }
+  ]
+}

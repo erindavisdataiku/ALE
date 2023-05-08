@@ -1,0 +1,36 @@
+{
+  "name": "Project Enablement",
+  "layout": "WIKI_ARTICLE",
+  "attachments": [
+    {
+      "attachmentType": "FILE",
+      "smartId": "dJajhvORkqPY",
+      "details": {
+        "objectDisplayName": "Asset Liability Reconciliation Talk Track.pptx.pdf",
+        "size": 150703,
+        "mimeType": "application/pdf"
+      },
+      "attachedBy": "walid.elkara@dataiku.com",
+      "attachedOn": 1670870949115
+    }
+  ],
+  "versionTag": {
+    "versionNumber": 13,
+    "lastModifiedBy": {
+      "login": "walid.elkara@dataiku.com"
+    },
+    "lastModifiedOn": 1670871511849
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "hannah.chung@aimpointdigital.com"
+    },
+    "lastModifiedOn": 1666904618640
+  },
+  "tags": [],
+  "customFields": {},
+  "checklists": {
+    "checklists": []
+  }
+}
