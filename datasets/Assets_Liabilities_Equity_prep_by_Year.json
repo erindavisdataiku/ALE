@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 5,
+    "versionNumber": 6,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1683652922559
+    "lastModifiedOn": 1683653254591
   },
   "creationTag": {
     "versionNumber": 0,
@@ -62,7 +62,7 @@
   "schema": {
     "columns": [
       {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
-      {"name":"Total Assets","type":"bigint"},
+      {"name":"Total Assets","type":"bigint","comment":"Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill"},
       {"name":"Cash","type":"bigint"},
       {"name":"Accounts Receivable","type":"bigint"},
       {"name":"Inventories","type":"bigint"},
