@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 3,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1683652922661
+    "lastModifiedOn": 1683653254673
   },
   "creationTag": {
     "versionNumber": 0,
@@ -63,7 +63,7 @@
     "columns": [
       {"name":"Year","type":"bigint","comment":"Year"},
       {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
-      {"name":"Total Assets","type":"bigint","meaning":"LongMeaning"},
+      {"name":"Total Assets","type":"bigint","comment":"Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill","meaning":"LongMeaning"},
       {"name":"Total Liabilities \u0026 Equity","type":"bigint","meaning":"LongMeaning"},
       {"name":"Cash","type":"bigint","meaning":"LongMeaning"},
       {"name":"Accounts Receivable","type":"bigint","meaning":"LongMeaning"},
