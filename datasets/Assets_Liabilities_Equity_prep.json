@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 13,
+    "versionNumber": 14,
     "lastModifiedBy": {
-      "login": "salvatore.ciaravino@dataiku.com"
+      "login": "admin"
     },
-    "lastModifiedOn": 1670881782119
+    "lastModifiedOn": 1683652922526
   },
   "creationTag": {
     "versionNumber": 0,
@@ -92,7 +92,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"Year","type":"string","maxLength":4194304},
+      {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
       {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
       {"name":"Region Code","type":"string","maxLength":4194304},
       {"name":"Total Assets","type":"bigint","meaning":"LongMeaning"},
