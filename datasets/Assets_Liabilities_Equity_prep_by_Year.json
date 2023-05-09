@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
-      "login": "walid.elkara@dataiku.com"
+      "login": "admin"
     },
-    "lastModifiedOn": 1671024512599
+    "lastModifiedOn": 1683652922559
   },
   "creationTag": {
     "versionNumber": 0,
@@ -61,7 +61,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"Year","type":"string","maxLength":4194304},
+      {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
       {"name":"Total Assets","type":"bigint"},
       {"name":"Cash","type":"bigint"},
       {"name":"Accounts Receivable","type":"bigint"},
