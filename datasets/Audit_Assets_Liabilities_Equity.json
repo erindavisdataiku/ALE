@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
-      "login": "ppham"
+      "login": "admin"
     },
-    "lastModifiedOn": 1680112492462
+    "lastModifiedOn": 1683652922596
   },
   "creationTag": {
     "versionNumber": 0,
@@ -60,7 +60,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"Year","type":"string","maxLength":4194304},
+      {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
       {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
       {"name":"Total Assets","type":"bigint","meaning":"LongMeaning"},
       {"name":"Total Liabilities \u0026 Equity","type":"bigint","meaning":"LongMeaning"},
