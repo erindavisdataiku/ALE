@@ -60,11 +60,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 14,
+    "versionNumber": 15,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1683652922526
+    "lastModifiedOn": 1683653254762
   },
   "creationTag": {
     "versionNumber": 0,
@@ -95,7 +95,7 @@
       {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
       {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
       {"name":"Region Code","type":"string","maxLength":4194304},
-      {"name":"Total Assets","type":"bigint","meaning":"LongMeaning"},
+      {"name":"Total Assets","type":"bigint","comment":"Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill","meaning":"LongMeaning"},
       {"name":"Total Liabilities","type":"bigint","meaning":"LongMeaning"},
       {"name":"Total Equity","type":"bigint","meaning":"LongMeaning"},
       {"name":"Total Liabilities \u0026 Equity","type":"bigint","meaning":"LongMeaning"},
