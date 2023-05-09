@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 3,
+    "versionNumber": 4,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1683643690837
+    "lastModifiedOn": 1683643704305
   },
   "creationTag": {
     "versionNumber": 0,
@@ -63,7 +63,7 @@
     "columns": [
       {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
       {"name":"BU ID","type":"string","comment":"Business Unit ID","maxLength":4194304},
-      {"name":"Cash","type":"string","maxLength":4194304},
+      {"name":"Cash","type":"string","comment":"Cash for Year/BU ID","maxLength":4194304},
       {"name":"Accounts Receivable","type":"string","maxLength":4194304},
       {"name":"Inventories","type":"string","maxLength":4194304},
       {"name":"Fixed Assets","type":"string","maxLength":4194304},
