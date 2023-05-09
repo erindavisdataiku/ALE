@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
-      "login": "walid.elkara@dataiku.com"
+      "login": "admin"
     },
-    "lastModifiedOn": 1670869920817
+    "lastModifiedOn": 1683652922661
   },
   "creationTag": {
     "versionNumber": 0,
@@ -61,7 +61,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"Year","type":"bigint"},
+      {"name":"Year","type":"bigint","comment":"Year"},
       {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
       {"name":"Total Assets","type":"bigint","meaning":"LongMeaning"},
       {"name":"Total Liabilities \u0026 Equity","type":"bigint","meaning":"LongMeaning"},
