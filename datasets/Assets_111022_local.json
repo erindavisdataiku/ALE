@@ -39,11 +39,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
-      "login": "walid.elkara@dataiku.com"
+      "login": "admin"
     },
-    "lastModifiedOn": 1670950697449
+    "lastModifiedOn": 1683653329397
   },
   "creationTag": {
     "versionNumber": 0,
@@ -67,7 +67,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"Year","type":"string"},
+      {"name":"Year","type":"string","comment":"Year"},
       {"name":"BU ID","type":"string"},
       {"name":"Cash","type":"string"},
       {"name":"Accounts Receivable","type":"string"},
