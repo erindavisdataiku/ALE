@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 7,
+    "versionNumber": 8,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1683643911109
+    "lastModifiedOn": 1683643993682
   },
   "creationTag": {
     "versionNumber": 0,
@@ -63,11 +63,11 @@
     "columns": [
       {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
       {"name":"BU ID","type":"string","comment":"Business Unit ID","maxLength":4194304},
-      {"name":"Cash","type":"string","comment":"Cash for Year/BU ID","maxLength":4194304},
-      {"name":"Accounts Receivable","type":"string","comment":"Accounts Receivable for Year/BU ID","maxLength":4194304},
-      {"name":"Inventories","type":"string","comment":"Inventories for Year/BU ID","maxLength":4194304},
-      {"name":"Fixed Assets","type":"string","comment":"Fixed Assets for Year/BU ID","maxLength":4194304},
-      {"name":"Goodwill","type":"string","comment":"Goodwill for Year/BU ID","maxLength":4194304}
+      {"name":"Cash","type":"bigint","comment":"Cash for Year/BU ID","maxLength":4194304},
+      {"name":"Accounts Receivable","type":"bigint","comment":"Accounts Receivable for Year/BU ID","maxLength":4194304},
+      {"name":"Inventories","type":"bigint","comment":"Inventories for Year/BU ID","maxLength":4194304},
+      {"name":"Fixed Assets","type":"bigint","comment":"Fixed Assets for Year/BU ID","maxLength":4194304},
+      {"name":"Goodwill","type":"bigint","comment":"Goodwill for Year/BU ID","maxLength":4194304}
     ],
     "userModified": true
   },
