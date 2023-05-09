@@ -29,11 +29,11 @@
     "dimensions": []
   },
   "versionTag": {
-    "versionNumber": 6,
+    "versionNumber": 7,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1683643722383
+    "lastModifiedOn": 1683643911109
   },
   "creationTag": {
     "versionNumber": 0,
@@ -65,9 +65,9 @@
       {"name":"BU ID","type":"string","comment":"Business Unit ID","maxLength":4194304},
       {"name":"Cash","type":"string","comment":"Cash for Year/BU ID","maxLength":4194304},
       {"name":"Accounts Receivable","type":"string","comment":"Accounts Receivable for Year/BU ID","maxLength":4194304},
-      {"name":"Inventories","type":"string","maxLength":4194304},
-      {"name":"Fixed Assets","type":"string","maxLength":4194304},
-      {"name":"Goodwill","type":"string","maxLength":4194304}
+      {"name":"Inventories","type":"string","comment":"Inventories for Year/BU ID","maxLength":4194304},
+      {"name":"Fixed Assets","type":"string","comment":"Fixed Assets for Year/BU ID","maxLength":4194304},
+      {"name":"Goodwill","type":"string","comment":"Goodwill for Year/BU ID","maxLength":4194304}
     ],
     "userModified": true
   },
