@@ -46,11 +46,11 @@
     ]
   },
   "versionTag": {
-    "versionNumber": 4,
+    "versionNumber": 5,
     "lastModifiedBy": {
-      "login": "salvatore.ciaravino@dataiku.com"
+      "login": "admin"
     },
-    "lastModifiedOn": 1670884372130
+    "lastModifiedOn": 1683652922700
   },
   "creationTag": {
     "versionNumber": 0,
@@ -77,7 +77,7 @@
   },
   "schema": {
     "columns": [
-      {"name":"Year","type":"bigint"},
+      {"name":"Year","type":"bigint","comment":"Year"},
       {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
       {"name":"Total Assets","type":"bigint","meaning":"LongMeaning"},
       {"name":"Total Liabilities \u0026 Equity","type":"bigint","meaning":"LongMeaning"},
