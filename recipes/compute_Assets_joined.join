@@ -6,60 +6,112 @@
       "conditionsMode": "AND",
       "type": "LEFT",
       "outerJoinOnTheLeft": true,
-      "on": []
+      "on": [
+        {
+          "column1": {
+            "name": "Year",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "Year",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        },
+        {
+          "column1": {
+            "name": "BU ID",
+            "table": 0
+          },
+          "dateDiffUnit": "DAY",
+          "windowFrom": 0,
+          "column2": {
+            "name": "BU ID",
+            "table": 1
+          },
+          "maxMatches": 1,
+          "caseInsensitive": false,
+          "maxDistance": 0,
+          "normalizeText": false,
+          "type": "EQ",
+          "strict": false,
+          "windowTo": 0
+        }
+      ]
     }
   ],
   "selectedColumns": [
     {
       "name": "Year",
+      "type": "string",
       "table": 0
     },
     {
       "name": "BU ID",
+      "type": "string",
       "table": 0
     },
     {
       "name": "Cash",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "Accounts Receivable",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "Inventories",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "Fixed Assets",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "Goodwill",
+      "type": "bigint",
       "table": 0
     },
     {
       "name": "Accounts Payable",
+      "type": "string",
       "table": 1
     },
     {
       "name": "Accrued Expenses",
+      "type": "string",
       "table": 1
     },
     {
       "name": "ST Debt",
+      "type": "string",
       "table": 1
     },
     {
       "name": "LT Debt",
+      "type": "string",
       "table": 1
     },
     {
       "name": "Shareholder Investment",
+      "type": "string",
       "table": 1
     },
     {
       "name": "Retained Earnings",
+      "type": "string",
       "table": 1
     }
   ],
@@ -120,5 +172,87 @@
       "computedColumns": []
     }
   ],
+  "computedColumns": [],
+  "postFilter": {
+    "$status": {
+      "schema": {
+        "columns": [
+          {
+            "name": "Year",
+            "comment": "Year",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "BU ID",
+            "comment": "Business Unit ID",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Cash",
+            "comment": "Cash for Year/BU ID",
+            "type": "bigint",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Accounts Receivable",
+            "comment": "Accounts Receivable for Year/BU ID",
+            "type": "bigint",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Inventories",
+            "comment": "Inventories for Year/BU ID",
+            "type": "bigint",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Fixed Assets",
+            "comment": "Fixed Assets for Year/BU ID",
+            "type": "bigint",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Goodwill",
+            "comment": "Goodwill for Year/BU ID",
+            "type": "bigint",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Accounts Payable",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Accrued Expenses",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "ST Debt",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "LT Debt",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Shareholder Investment",
+            "type": "string",
+            "maxLength": 4194304
+          },
+          {
+            "name": "Retained Earnings",
+            "type": "string",
+            "maxLength": 4194304
+          }
+        ],
+        "userModified": false
+      }
+    }
+  },
   "enableAutoCastInJoinConditions": false
 }
