@@ -29,6 +29,14 @@
     {
       "objectId": "Liabilities_and_Equity_111022_local",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Assets_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Assets_joined",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
