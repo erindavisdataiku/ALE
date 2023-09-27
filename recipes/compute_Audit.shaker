@@ -5,10 +5,6 @@
   "explorationSampling": {
     "_refreshTrigger": 0,
     "selection": {
-      "filter": {
-        "distinct": false,
-        "enabled": false
-      },
       "latestPartitionsN": 1,
       "maxRecords": 10000,
       "maxRecordsForDisplay": -1,
@@ -17,16 +13,22 @@
         "enabled": false
       },
       "withinFirstN": -1,
-      "partitionSelectionMethod": "ALL",
       "maxStoredBytes": 104857600,
+      "ascending": true,
+      "timeout": -1,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "HEAD_SEQUENTIAL",
-      "timeout": -1
+      "samplingMethod": "HEAD_SEQUENTIAL"
     },
     "autoRefreshSample": false
   },
   "explorationFilters": [],
+  "columnUseScientificNotationByName": {},
   "origin": "PREPARE_RECIPE",
   "exploreUIParams": {
     "autoRefresh": true
@@ -69,7 +71,8 @@
       "partitionSelectionMethod": "ALL",
       "targetRatio": 0.02,
       "maxReadUncompressedBytes": -1,
-      "samplingMethod": "FULL"
+      "samplingMethod": "FULL",
+      "ascending": true
     },
     "autoRefreshSample": false
   },

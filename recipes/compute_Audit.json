@@ -54,7 +54,7 @@
     "main": {
       "items": [
         {
-          "ref": "Audit_Local",
+          "ref": "Audit_Local_copy",
           "deps": []
         }
       ]
@@ -72,18 +72,20 @@
   },
   "labels": [],
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
-      "login": "walid.elkara@dataiku.com"
+      "login": "admin"
     },
-    "lastModifiedOn": 1670876079923
+    "lastModifiedOn": 1695820918615,
+    "extendedProperties": {}
   },
   "creationTag": {
     "versionNumber": 0,
     "lastModifiedBy": {
       "login": "walid.elkara@dataiku.com"
     },
-    "lastModifiedOn": 1670876072582
+    "lastModifiedOn": 1670876072582,
+    "extendedProperties": {}
   },
   "tags": [],
   "customFields": {},
