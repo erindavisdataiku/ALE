@@ -32,6 +32,7 @@
         "samplingMethod": "HEAD_SEQUENTIAL",
         "maxRecords": 10000,
         "targetRatio": 0.02,
+        "ascending": true,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
@@ -54,6 +55,7 @@
         "samplingMethod": "FULL",
         "maxRecords": -1,
         "targetRatio": 0.02,
+        "ascending": true,
         "withinFirstN": -1,
         "maxReadUncompressedBytes": -1
       },
@@ -84,6 +86,7 @@
             },
             "maxValues": 20,
             "generateOthersCategory": true,
+            "forceLastPositionOthers": false,
             "oneTickPerBin": false,
             "filters": [],
             "isA": "dimension",
@@ -134,7 +137,8 @@
             },
             "prefix": "",
             "suffix": "",
-            "multiplier": "Auto"
+            "multiplier": "Auto",
+            "digitGrouping": "DEFAULT"
           }
         ],
         "genericDimension1": [],
@@ -152,6 +156,7 @@
             "computeMode": "NORMAL",
             "computeModeDim": 0,
             "multiplier": "Auto",
+            "digitGrouping": "DEFAULT",
             "prefix": "",
             "suffix": "",
             "showDisplayLabel": true,
@@ -169,6 +174,7 @@
             "computeMode": "NORMAL",
             "computeModeDim": 0,
             "multiplier": "Auto",
+            "digitGrouping": "DEFAULT",
             "prefix": "",
             "suffix": "",
             "showDisplayLabel": true,
@@ -186,6 +192,7 @@
             "computeMode": "NORMAL",
             "computeModeDim": 0,
             "multiplier": "Auto",
+            "digitGrouping": "DEFAULT",
             "prefix": "",
             "suffix": "",
             "showDisplayLabel": true,
@@ -239,24 +246,26 @@
         "filters": [
           {
             "filterType": "ALPHANUM_FACET",
+            "filterSelectionType": "MULTI_SELECT",
+            "id": "dRs4Rhzs0tQaIEJz",
             "column": "Category",
             "columnType": "ALPHANUM",
             "isA": "filter",
             "excludedValues": {
-              "Total Liabilities": true,
               "Accounts Payable": true,
-              "Inventories": true,
-              "Fixed Assets": true,
-              "Accrued Expenses": true,
-              "Shareholder Investment": true,
-              "Cash": true,
-              "Total Equity": true,
-              "Year": true,
-              "LT Debt": true,
               "Accounts Receivable": true,
-              "ST Debt": true,
+              "Accrued Expenses": true,
+              "Cash": true,
+              "Fixed Assets": true,
               "Goodwill": true,
-              "Retained Earnings": true
+              "Inventories": true,
+              "LT Debt": true,
+              "Retained Earnings": true,
+              "ST Debt": true,
+              "Shareholder Investment": true,
+              "Total Equity": true,
+              "Total Liabilities": true,
+              "Year": true
             },
             "isAGlobalFilter": false,
             "excludeOtherValues": false,
@@ -265,6 +274,56 @@
             "explicitExclude": false
           }
         ],
+        "xAxisFormatting": {
+          "displayAxis": true,
+          "showAxisTitle": true,
+          "axisTitleFormatting": {
+            "fontSize": 15,
+            "fontColor": "#333",
+            "hasBackground": false
+          },
+          "axisValuesFormatting": {
+            "numberFormatting": {
+              "multiplier": "Auto",
+              "prefix": "",
+              "suffix": ""
+            },
+            "axisTicksFormatting": {
+              "fontSize": 12,
+              "fontColor": "#333",
+              "hasBackground": false
+            }
+          }
+        },
+        "yAxisFormatting": {
+          "displayAxis": true,
+          "showAxisTitle": true,
+          "axisTitleFormatting": {
+            "fontSize": 15,
+            "fontColor": "#333",
+            "hasBackground": false
+          },
+          "axisValuesFormatting": {
+            "numberFormatting": {
+              "multiplier": "Auto",
+              "prefix": "",
+              "suffix": ""
+            },
+            "axisTicksFormatting": {
+              "fontSize": 12,
+              "fontColor": "#333",
+              "hasBackground": false
+            }
+          }
+        },
+        "radialAxisFormatting": {
+          "showAxisTitle": false,
+          "axisTitleFormatting": {
+            "fontSize": 15,
+            "fontColor": "#333",
+            "hasBackground": false
+          }
+        },
         "axis1LogScale": false,
         "axis2LogScale": false,
         "includeZero": true,
@@ -272,26 +331,28 @@
         "showLegend": true,
         "showXAxis": false,
         "showInChartValues": false,
+        "showInChartTotalValues": true,
         "showInChartLabels": true,
         "strokeWidth": 1,
         "fillOpacity": 0.6,
-        "showXAxisLabel": true,
-        "showYAxisLabel": true,
-        "yAxisNumberFormattingOptions": {
-          "multiplier": "Auto",
-          "prefix": "",
-          "suffix": ""
+        "xTicks": {
+          "mode": "INTERVAL"
         },
-        "xAxisNumberFormattingOptions": {
-          "multiplier": "Auto",
-          "prefix": "",
-          "suffix": ""
+        "yTicks": {
+          "mode": "INTERVAL"
         },
-        "displayXAxis": true,
-        "displayYAxis": true,
         "hexbinRadius": 20,
         "hexbinNumber": 20,
         "hexbinRadiusMode": "NUM_HEXAGONS",
+        "valuesInChartDisplayOptions": {
+          "overlappingStrategy": "AUTO",
+          "textFormatting": {
+            "fontSize": 11,
+            "fontColor": "AUTO",
+            "hasBackground": false,
+            "backgroundColor": "#D9D9D9BF"
+          }
+        },
         "yCustomExtent": {
           "editMode": "AUTO",
           "manualExtent": [
@@ -341,9 +402,32 @@
         "pieOptions": {
           "donutHoleSize": 54.0
         },
+        "zoomOptions": {
+          "scale": 1.0,
+          "translate": [
+            0.0,
+            0.0
+          ],
+          "enabled": true,
+          "persisted": true
+        },
         "scatterOptions": {
           "equalScales": false,
-          "identityLine": false
+          "identityLine": false,
+          "regression": {
+            "show": false,
+            "displayFormula": false,
+            "type": "LINEAR",
+            "labelPosition": "INSIDE_END",
+            "lineColor": "#000",
+            "lineSize": 1,
+            "textFormatting": {
+              "fontSize": 11,
+              "fontColor": "#333",
+              "hasBackground": false
+            }
+          },
+          "numberOfRecords": 100000.0
         },
         "mapOptions": {
           "tilesLayer": "cartodb-positron",
@@ -353,26 +437,67 @@
           "gridLonDeg": 0.5,
           "gridLatDeg": 0.5
         },
-        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAxpJREFUeF7tnU9LlFEUxu+7irEwBkQdcKxghCiXbnKRKRZBFlKg9AXmE0w4tEqCKAr8AO3dBC00IXBZoGCL2ReYQaDRH95A2uTcmFmYkeBz5L7D3OHn+pE553nu+d3jdTGJ46ejHUg6ujuacwTc4YcgSMBn761cV33yvp5uPbu5purbRWfpsVHzx6c3XrdD7UECPlNdWXTeF6SG9vz9GAMerL4qJ97dlXp0bnXrydQjUZupjIBFewmYCT54VJhgcXDaRsYEM8FMcNMBlqyWUoklS7QbRINoEA2iRVwElIFo0UwQDaJBNIgWcRFQBqJFM0E0iAbRIFrERUAZiBbNBNEgGkSDaBEXAWUgWjQTRINoEA2iRVwElIFo0UwQDaJBNIgWcRFQBqJFM0E0iAbRIFrERUAZiBbNBNEgGkSDaBEXAWUgWjQTRINoEA2iRVwElIFo0UwQDaJBNIgWcRFQBqJFM0E0iAbRIFrERUAZiBbNBNEgGkSDaBEXAWUgWjQTRIuIHsp3PS5fHtoQfXUzo8XvqjZLnSXgnpMn3s5Nnl9Q68myx5ZP8NzExU+F7tyg0nzdu+d3RvsXFW3WGkvAV0p9m9PDxXNKTd6597cv9ZcV7XE0BCy6RsAiopngf08UEwyiRcYcLgPRon0gGkTvHxWWLLbo/cPAHcwdLF4iEd7Bp7+9ezG+MftS7TCZ391WtVZdVndw1+7m52tvJitqPdYe23rJGqlVPgxsL5ek5utuNXmYZvZFGFkFnE9rX8bWZnulHp37ncynV0VtU0bAolsEnMEWzQT/d/qYYHEgzTImmAk+1t/B3MEsWQdpA6LN7BV/AUSDaBDdcMDy70K2aLbovw7w0HHoZcNDB3fw0Q40vj/Ye3fqaKVz1YkLPwrdubyiHalVdgZ2lvoUrdtL1rN+qnQ+mVJqGS/1fp0eLvYo2nxa+zW2PpNTtM2nxwc/b6naYE+Vlg9E21oHgiC6tSXzaRYHCNjiVoRaAo4wNEvJBGxxK0ItAUcYmqVkAra4FaGWgCMMzVIyAVvcilBLwBGGZimZgC1uRaj9A8/ugI3b7Wu5AAAAAElFTkSuQmCC",
-        "disableSafetyLimits": false,
+        "radarOptions": {
+          "filled": false,
+          "polygonsSource": "MEASURES",
+          "lineStyle": {
+            "width": 2.0,
+            "type": "SOLID"
+          }
+        },
+        "thumbnailData": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABQCAYAAADSm7GJAAAAAXNSR0IArs4c6QAAAy1JREFUeF7tmr9rU1Ecxe9rKjTGIiL+qqjVSU2nOolYl9oOSgIdXMRZLDgK1i2LUCHoLPgfOBbsIBRxdnNQwUIJqIVAkaCtxvcitRkaLeW8JDffl+cn88n73nvOPd93vjcJHJ9UMxCkendsziFwyg8BAiNwyhlI+fZwMAKnnIGUb69tB5+ae3HRReGsys/K/PVbKjYpuONzLw8ORhtP1PUMNcLZ94+KNRXfC1ynAj/UFhl8Wpm/dlPDJgfVFPi5uqKhRlhAYJWtBOAQOApx8LaDiIMT4Mo4S8DBOLjlvODgOPZJABYH42AcvMUAY5JVQ2IO3oV5WjQtmhZNi7Zqzk3m2y3fvIvmooOLDkJWuybqxvcIWYSsnRmgRf/LCzdZ3eg5PXwGYxJjEmMSY1IPW84OpQhZhCxClupBQpbKVEJwhCxCFiGLkGXbjghZhCxClupBQpbKVEJwhCxCFiGLkGXbjghZhCxClupBQpbKVEJwhCxCFiGLkGXbjghZhCxClupBQpbKVEJwhCxCFiGLkGXbjghZhKzOQ9bhXHbtwVR+TT3L9X3VOzfGxn6qeF+4uO/gcmG8kskM1JX1NEL3eObS0bcKthNMTxz8R+Cr+QPqQuvD1em+FLh4YT0TBFlln43I3UVghSmPmNgORmBNDRys8aSgaNFdDFllHKycOedwsMaTgsLBOLhLYxIpuoXI/zpFFxbPvxlwYai0IOeiZ0Gp9kHDxkP5TNFTryaX965XqtqKotdBqbagYVtRiWzRxcWzvwLXGNQ2FN3uR4GnlyY+Z3+sHhP3WEZgjalYKJ8ORmAcvO0wRjg4ljVFMA4Wfw+OexfNO/jvE4iD+y5F8w7mHcw7eIsBxqTdIgVzsNFVJS2aFm3bok/eXzgjThtucnTkyMz4yKqKn1i6smf4+xfpry+bzwxKX5fVZ8fBbY5JmcbGfvU79y6fy50+lPum4PPvyidGPz6tKNhO9th2i1YXBs6WAQS25d97dQT2TrFtAQS25d97dQT2TrFtAQS25d97dQT2TrFtAQS25d97dQT2TrFtAQS25d97dQT2TrFtAQS25d97dQT2TrFtgd9BvWKNCw0IHQAAAABJRU5ErkJggg\u003d\u003d",
         "useLiveProcessingIfAvailable": true,
         "legendPlacement": "OUTER_RIGHT",
-        "pivotMeasureDisplayMode": "ROWS",
-        "pivotDisplayTotals": {
-          "subTotals": {
-            "rows": true,
-            "columns": true
+        "legendFormatting": {
+          "fontSize": 11,
+          "fontColor": "#333",
+          "hasBackground": false
+        },
+        "pivotTableOptions": {
+          "measureDisplayMode": "ROWS",
+          "displayTotals": {
+            "subTotals": {
+              "rows": true,
+              "columns": true
+            },
+            "grandTotal": {
+              "row": true,
+              "column": true
+            }
           },
-          "grandTotal": {
-            "row": true,
-            "column": true
+          "tableFormatting": {
+            "rowHeaders": {
+              "fontSize": 12,
+              "fontColor": "#333",
+              "hasBackground": false
+            },
+            "columnHeaders": {
+              "fontSize": 12,
+              "fontColor": "#333",
+              "hasBackground": false
+            },
+            "values": {
+              "fontSize": 12,
+              "fontColor": "#333",
+              "hasBackground": false
+            }
           }
+        },
+        "yAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
+        },
+        "xAxisNumberFormattingOptions": {
+          "multiplier": "Auto",
+          "prefix": "",
+          "suffix": ""
         }
-      },
-      "maxDataBytes": 157286400
+      }
     }
   ],
   "interactiveSearch": {
     "savedQueries": []
-  }
+  },
+  "customMeasures": []
 }
