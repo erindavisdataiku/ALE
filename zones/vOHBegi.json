@@ -33,10 +33,6 @@
     {
       "objectId": "compute_Assets_joined",
       "objectType": "RECIPE"
-    },
-    {
-      "objectId": "Assets_joined",
-      "objectType": "DATASET"
     }
   ],
   "shared": [],
