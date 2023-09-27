@@ -33,6 +33,14 @@
     {
       "objectId": "compute_Audit",
       "objectType": "RECIPE"
+    },
+    {
+      "objectId": "compute_Audit_Local_copy",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Audit_Local_copy",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
