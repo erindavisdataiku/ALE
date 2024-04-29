@@ -63,12 +63,7 @@
         "type": "DATASET",
         "localName": "Assets",
         "quickSharingEnabled": true,
-        "rules": [
-          {
-            "targetProject": "CKD_OUTREACH",
-            "appearOnFlow": true
-          }
-        ]
+        "rules": []
       }
     ]
   },
