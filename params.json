@@ -63,7 +63,12 @@
         "type": "DATASET",
         "localName": "Assets",
         "quickSharingEnabled": true,
-        "rules": []
+        "rules": [
+          {
+            "targetProject": "CKD_OUTREACH",
+            "appearOnFlow": true
+          }
+        ]
       }
     ]
   },
@@ -98,6 +103,8 @@
       "useManualPluginsInfo": false,
       "exportSavedModelsRequiredVersions": false,
       "exportNotebooksWithOutputs": true,
+      "exportForNewBranch": false,
+      "exportKnowledgeBanks": false,
       "includedDatasetsData": [
         {
           "name": "Audit_Local",
@@ -125,6 +132,7 @@
         }
       ],
       "includedCodeStudios": [],
+      "includedKnowledgeBanks": [],
       "includedLabelingTasks": [],
       "shareAllInputDatasets": false,
       "exportForeignObjectsReferences": true
@@ -196,6 +204,9 @@
       }
     },
     "container": {
+      "containerMode": "INHERIT"
+    },
+    "containerForVisualRecipesWorkloads": {
       "containerMode": "INHERIT"
     },
     "datasetsCreationSettings": {
@@ -312,14 +323,6 @@
     "displayedState": {
       "checks": []
     }
-  },
-  "versionTag": {
-    "versionNumber": 173,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1695820784509,
-    "extendedProperties": {}
   },
   "creationTag": {
     "versionNumber": 0,
