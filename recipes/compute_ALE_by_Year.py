@@ -4,11 +4,12 @@ import dataiku
 import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Read recipe inputs
 Assets_Liabilities_Equity_prep = dataiku.Dataset("Assets_Liabilities_Equity_prep")
 df = Assets_Liabilities_Equity_prep.get_dataframe()
 
-
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Perform the grouping and aggregation
 aggregated_df = df.groupby("Year").agg({
     "Total Assets": "sum",
@@ -20,6 +21,7 @@ aggregated_df = df.groupby("Year").agg({
     "BU ID": "count"  # Using 'BU ID' to count rows
 }).reset_index()
 
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Rename the columns to match the SQL output
 aggregated_df = aggregated_df.rename(columns={
     "Total Assets": "Total Assets_sum",
@@ -33,7 +35,7 @@ aggregated_df = aggregated_df.rename(columns={
 
 aggreated_df.head()
 
-
+# -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
 ALE_by_Year = dataiku.Dataset("ALE_by_Year")
 ALE_by_Year.write_with_schema(aggregated_df)
