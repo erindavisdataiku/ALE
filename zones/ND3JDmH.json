@@ -19,10 +19,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "compute_Audit_Assets_Liabilities_Equity",
-      "objectType": "RECIPE"
-    },
-    {
       "objectId": "compute_Assets_Liabilities_Equity_prep_joined",
       "objectType": "RECIPE"
     },
