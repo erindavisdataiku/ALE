@@ -53,22 +53,7 @@
       "table": 0
     },
     {
-      "name": "Region Code",
-      "type": "string",
-      "table": 0
-    },
-    {
       "name": "Total Assets",
-      "type": "bigint",
-      "table": 0
-    },
-    {
-      "name": "Total Liabilities",
-      "type": "bigint",
-      "table": 0
-    },
-    {
-      "name": "Total Equity",
       "type": "bigint",
       "table": 0
     },
@@ -133,17 +118,8 @@
       "table": 0
     },
     {
-      "name": "YEAR",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "BU_ID",
-      "type": "string",
-      "table": 1
-    },
-    {
       "name": "TOTAL_ASSETS",
+      "alias": "Audit Total Assets",
       "type": "double",
       "table": 1
     }
@@ -188,7 +164,7 @@
   },
   "virtualInputs": [
     {
-      "outputColumnsSelectionMode": "AUTO_NON_CONFLICTING",
+      "outputColumnsSelectionMode": "MANUAL",
       "preFilter": {
         "distinct": false,
         "enabled": false
@@ -198,7 +174,7 @@
       "computedColumns": []
     },
     {
-      "outputColumnsSelectionMode": "AUTO_NON_CONFLICTING",
+      "outputColumnsSelectionMode": "MANUAL",
       "preFilter": {
         "distinct": false,
         "enabled": false
@@ -208,7 +184,20 @@
       "computedColumns": []
     }
   ],
-  "computedColumns": [],
+  "computedColumns": [
+    {
+      "mode": "GREL",
+      "name": "Flag_Control_Recon",
+      "expr": "if(val(\"Total Assets\") \u003d\u003d val(\"Audit Total Assets\"),\"Y\",\"N\")",
+      "type": "string"
+    },
+    {
+      "mode": "GREL",
+      "name": "Flag_Balance_Recon",
+      "expr": "if(val(\"Total Assets\") \u003d\u003d val(\"Total Liabilities \u0026 Equity\"),\"Y\",\"N\")",
+      "type": "string"
+    }
+  ],
   "postFilter": {
     "$status": {
       "schema": {
@@ -226,24 +215,9 @@
             "maxLength": 4194304
           },
           {
-            "name": "Region Code",
-            "type": "string",
-            "maxLength": 4194304
-          },
-          {
             "meaning": "LongMeaning",
             "name": "Total Assets",
             "comment": "Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill",
-            "type": "bigint"
-          },
-          {
-            "meaning": "LongMeaning",
-            "name": "Total Liabilities",
-            "type": "bigint"
-          },
-          {
-            "meaning": "LongMeaning",
-            "name": "Total Equity",
             "type": "bigint"
           },
           {
@@ -318,21 +292,17 @@
             "maxLength": 4194304
           },
           {
-            "originalType": "STRING",
-            "name": "YEAR",
-            "type": "string",
-            "maxLength": 255
-          },
-          {
-            "originalType": "STRING",
-            "name": "BU_ID",
-            "type": "string",
-            "maxLength": 255
-          },
-          {
             "originalType": "DOUBLE",
-            "name": "TOTAL_ASSETS",
+            "name": "Audit Total Assets",
             "type": "double"
+          },
+          {
+            "name": "Flag_Control_Recon",
+            "type": "string"
+          },
+          {
+            "name": "Flag_Balance_Recon",
+            "type": "string"
           }
         ],
         "userModified": false
