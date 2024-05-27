@@ -47,12 +47,7 @@
       "objectType": "RECIPE"
     }
   ],
-  "shared": [
-    {
-      "objectId": "Audit_Assets_Liabilities_Equity",
-      "objectType": "DATASET"
-    }
-  ],
+  "shared": [],
   "tags": [],
   "customFields": {},
   "checklists": {

@@ -19,10 +19,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "Audit_Assets_Liabilities_Equity",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "compute_Audit_Assets_Liabilities_Equity",
       "objectType": "RECIPE"
     },
