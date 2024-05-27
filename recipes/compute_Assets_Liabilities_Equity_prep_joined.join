@@ -152,7 +152,16 @@
       "readParams": {
         "mode": "AUTO",
         "autoModeRepartitionInto": 10,
-        "map": {}
+        "map": {
+          "Assets_Liabilities_Equity_prep": {
+            "cache": false,
+            "repartition": 10
+          },
+          "Audit_Local_DBX_prepared": {
+            "cache": false,
+            "repartition": 10
+          }
+        }
       },
       "overwriteOutputSchema": false,
       "executionEngine": "SPARK_SUBMIT",
@@ -162,6 +171,7 @@
       }
     }
   },
+  "engineType": "DSS",
   "virtualInputs": [
     {
       "outputColumnsSelectionMode": "MANUAL",
