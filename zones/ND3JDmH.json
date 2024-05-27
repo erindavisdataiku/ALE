@@ -31,10 +31,6 @@
       "objectType": "DATASET"
     },
     {
-      "objectId": "compute_Audit",
-      "objectType": "RECIPE"
-    },
-    {
       "objectId": "Audit_Local_copy",
       "objectType": "DATASET"
     },
