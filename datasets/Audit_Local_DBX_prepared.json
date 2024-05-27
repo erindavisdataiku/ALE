@@ -56,9 +56,9 @@
   },
   "schema": {
     "columns": [
-      {"name":"Year","type":"string","maxLength":65500},
-      {"name":"BU_ID","type":"string","maxLength":65500},
-      {"name":"Total_Assets","type":"string","maxLength":65500}
+      {"name":"YEAR","type":"string","originalType":"STRING","maxLength":255},
+      {"name":"BU_ID","type":"string","originalType":"STRING","maxLength":255},
+      {"name":"TOTAL_ASSETS","type":"double","originalType":"DOUBLE"}
     ],
     "userModified": true
   },
