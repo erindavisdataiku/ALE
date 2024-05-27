@@ -5,7 +5,7 @@
   "params": {
     "envSelection": {
       "envMode": "EXPLICIT_ENV",
-      "envName": "38"
+      "envName": "Mainline_Py36"
     },
     "containerSelection": {
       "containerMode": "NONE"
