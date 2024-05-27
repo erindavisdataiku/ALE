@@ -25,6 +25,18 @@
           "type": "EQ",
           "strict": false,
           "windowTo": 0
+        },
+        {
+          "column1": {
+            "name": "BU ID",
+            "table": 0
+          },
+          "dateDiffUnit": "SECOND",
+          "column2": {
+            "name": "BU_ID",
+            "table": 1
+          },
+          "type": "EQ"
         }
       ]
     }
