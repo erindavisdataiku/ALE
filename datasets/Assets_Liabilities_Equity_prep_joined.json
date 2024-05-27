@@ -58,10 +58,7 @@
     "columns": [
       {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
       {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
-      {"name":"Region Code","type":"string","maxLength":4194304},
       {"name":"Total Assets","type":"bigint","comment":"Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill","meaning":"LongMeaning"},
-      {"name":"Total Liabilities","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Total Equity","type":"bigint","meaning":"LongMeaning"},
       {"name":"Total Liabilities \u0026 Equity","type":"bigint","meaning":"LongMeaning"},
       {"name":"Cash","type":"bigint","meaning":"LongMeaning","maxLength":4194304},
       {"name":"Accounts Receivable","type":"bigint","meaning":"LongMeaning","maxLength":4194304},
@@ -74,9 +71,9 @@
       {"name":"LT Debt","type":"bigint","meaning":"LongMeaning","maxLength":4194304},
       {"name":"Shareholder Investment","type":"bigint","meaning":"LongMeaning","maxLength":4194304},
       {"name":"Retained Earnings","type":"bigint","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"YEAR","type":"string","originalType":"STRING","maxLength":255},
-      {"name":"BU_ID","type":"string","originalType":"STRING","maxLength":255},
-      {"name":"TOTAL_ASSETS","type":"double","originalType":"DOUBLE"}
+      {"name":"Audit Total Assets","type":"double"},
+      {"name":"Flag_Control_Recon","type":"string","maxLength":4194304},
+      {"name":"Flag_Balance_Recon","type":"string","maxLength":4194304}
     ],
     "userModified": true
   },
