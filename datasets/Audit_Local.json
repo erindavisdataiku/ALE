@@ -59,19 +59,13 @@
     "considerMissingRequestedPartitionsAsEmpty": false,
     "dimensions": []
   },
-  "versionTag": {
-    "versionNumber": 1,
-    "lastModifiedBy": {
-      "login": "walid.elkara@dataiku.com"
-    },
-    "lastModifiedOn": 1670875894674
-  },
   "creationTag": {
     "versionNumber": 0,
     "lastModifiedBy": {
       "login": "walid.elkara@dataiku.com"
     },
-    "lastModifiedOn": 1670875894336
+    "lastModifiedOn": 1670875894336,
+    "extendedProperties": {}
   },
   "tags": [],
   "params": {
@@ -103,8 +97,8 @@
   "schema": {
     "columns": [
       {"name":"Year","type":"string"},
-      {"name":"BU ID","type":"string"},
-      {"name":"Total Assets","type":"string"}
+      {"name":"BU_ID","type":"string"},
+      {"name":"Total_Assets","type":"string"}
     ],
     "userModified": true
   },
@@ -156,6 +150,7 @@
           "samplingMethod": "FULL",
           "maxRecords": -1,
           "targetRatio": 0.02,
+          "ascending": true,
           "withinFirstN": -1,
           "maxReadUncompressedBytes": -1
         }
@@ -183,7 +178,7 @@
     }
   },
   "metricsChecks": {
-    "runOnBuild": false,
+    "monitor": false,
     "checks": [],
     "displayedState": {
       "checks": []
