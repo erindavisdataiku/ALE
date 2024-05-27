@@ -29,6 +29,10 @@
     {
       "objectId": "ALE_by_Year",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_ALE_by_Year",
+      "objectType": "RECIPE"
     }
   ],
   "shared": [],
