@@ -33,7 +33,7 @@ aggregated_df = aggregated_df.rename(columns={
     "BU ID": "count"
 })
 
-aggreated_df.head()
+aggregated_df.head()
 
 # -------------------------------------------------------------------------------- NOTEBOOK-CELL: CODE
 # Write recipe outputs
