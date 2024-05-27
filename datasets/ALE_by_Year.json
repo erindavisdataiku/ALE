@@ -55,8 +55,17 @@
     "numPartitions": -1
   },
   "schema": {
-    "columns": [],
-    "userModified": true
+    "columns": [
+      {"name":"Year","type":"bigint"},
+      {"name":"Total Assets_sum","type":"bigint"},
+      {"name":"Cash_sum","type":"bigint"},
+      {"name":"Accounts Receivable_sum","type":"bigint"},
+      {"name":"Inventories_sum","type":"bigint"},
+      {"name":"Fixed Assets_sum","type":"bigint"},
+      {"name":"Goodwill_sum","type":"bigint"},
+      {"name":"count","type":"bigint"}
+    ],
+    "userModified": false
   },
   "dkuProperties": [],
   "metrics": {
