@@ -19,10 +19,6 @@
       "objectType": "DATASET"
     },
     {
-      "objectId": "compute_Assets_Liabilities_Equity_prep_by_Year",
-      "objectType": "RECIPE"
-    },
-    {
       "objectId": "Assets_Liabilities_Equity_prep_by_Year",
       "objectType": "DATASET"
     },
