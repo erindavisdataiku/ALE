@@ -1,193 +1,258 @@
 {
-  "type": "Snowflake",
-  "managed": true,
-  "featureGroup": false,
-  "formatType": "csv",
-  "checklists": {
-    "checklists": []
-  },
-  "checks": [],
-  "customMeta": {
-    "kv": {}
-  },
-  "flowOptions": {
-    "virtualizable": false,
-    "rebuildBehavior": "NORMAL",
-    "crossProjectBuildBehavior": "DEFAULT"
-  },
-  "readWriteOptions": {
-    "preserveOrder": false,
-    "writeBuckets": 1,
-    "forceSingleOutputFile": false,
-    "defaultReadOrdering": {
-      "enabled": false,
-      "rules": []
-    }
-  },
-  "formatParams": {
-    "style": "unix",
-    "charset": "utf8",
-    "separator": "\t",
-    "quoteChar": "\"",
-    "escapeChar": "\\",
-    "dateSerializationFormat": "ISO",
-    "arrayMapFormat": "json",
-    "hiveSeparators": [
-      "\u0002",
-      "\u0003",
-      "\u0004",
-      "\u0005",
-      "\u0006",
-      "\u0007",
-      "\b"
-    ],
-    "skipRowsBeforeHeader": 0,
-    "parseHeaderRow": false,
-    "skipRowsAfterHeader": 0,
-    "probableNumberOfRecords": 0,
-    "normalizeBooleans": false,
-    "normalizeDoubles": true,
-    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
-    "readMissingColumnsBehavior": "DISCARD_SILENT",
-    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
-    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
-    "fileReadFailureBehavior": "FAIL",
-    "compress": "gz"
-  },
-  "partitioning": {
-    "ignoreNonMatchingFile": false,
-    "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": []
-  },
-  "versionTag": {
-    "versionNumber": 8,
-    "lastModifiedBy": {
-      "login": "admin"
+    "type": "Snowflake",
+    "managed": true,
+    "featureGroup": false,
+    "formatType": "csv",
+    "checklists": {
+        "checklists": []
     },
-    "lastModifiedOn": 1683653329169
-  },
-  "creationTag": {
-    "versionNumber": 0,
-    "lastModifiedBy": {
-      "login": "justin.davis"
+    "checks": [],
+    "customMeta": {
+        "kv": {}
     },
-    "lastModifiedOn": 1664996346508
-  },
-  "tags": [],
-  "params": {
-    "connection": "SEDEMO",
-    "notReadyIfEmpty": false,
-    "mode": "table",
-    "partitioningType": "custom",
-    "normalizeDoubles": true,
-    "table": "ASSETS_LIABILITIES_EQUITY_${projectKey}",
-    "schema": "PUBLIC",
-    "tableCreationMode": "auto",
-    "writeInsertBatchSize": 10000,
-    "writeJDBCBadDataBehavior": "DISCARD_ROW",
-    "readColsWithUnknownTzAsDates": false,
-    "readSQLDateColsAsDSSDates": true,
-    "sparkJdbcAccess": "NONE",
-    "numPartitions": -1
-  },
-  "schema": {
-    "columns": [
-      {"name":"Year","type":"string","comment":"Year","maxLength":4194304},
-      {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
-      {"name":"Cash","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Accounts Receivable","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Inventories","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Fixed Assets","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Goodwill","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Accounts Payable","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Accrued Expenses","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"ST Debt","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"LT Debt","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Shareholder Investment","type":"string","meaning":"LongMeaning","maxLength":4194304},
-      {"name":"Retained Earnings","type":"string","meaning":"LongMeaning","maxLength":4194304}
-    ],
-    "userModified": true
-  },
-  "dkuProperties": [],
-  "metrics": {
-    "probes": [
-      {
-        "type": "basic",
-        "enabled": true,
-        "computeOnBuildMode": "PARTITION",
-        "meta": {
-          "name": "Basic data",
-          "level": 0
-        },
-        "configuration": {}
-      },
-      {
-        "type": "records",
-        "enabled": true,
-        "computeOnBuildMode": "NO",
-        "meta": {
-          "name": "Record count",
-          "level": 0
-        },
-        "configuration": {}
-      }
-    ],
-    "engineConfig": {
-      "padRunsWithMetrics": false,
-      "hive": {
-        "active": true,
-        "extraConf": []
-      },
-      "basic": {},
-      "dss": {
-        "active": true,
-        "selection": {
-          "useMemTable": false,
-          "filter": {
-            "distinct": false,
-            "enabled": false
-          },
-          "partitionSelectionMethod": "ALL",
-          "latestPartitionsN": 1,
-          "ordering": {
+    "flowOptions": {
+        "virtualizable": false,
+        "rebuildBehavior": "NORMAL",
+        "crossProjectBuildBehavior": "DEFAULT"
+    },
+    "readWriteOptions": {
+        "preserveOrder": false,
+        "writeBuckets": 1,
+        "forceSingleOutputFile": false,
+        "defaultReadOrdering": {
             "enabled": false,
             "rules": []
-          },
-          "samplingMethod": "FULL",
-          "maxRecords": -1,
-          "targetRatio": 0.02,
-          "withinFirstN": -1,
-          "maxReadUncompressedBytes": -1
         }
-      },
-      "sql": {
-        "active": true
-      },
-      "impala": {
-        "active": true
-      },
-      "spark": {
-        "active": true,
-        "extraConf": []
-      },
-      "python": {}
     },
-    "displayedState": {
-      "columns": [],
-      "metrics": [
-        "basic:COUNT_COLUMNS",
-        "records:COUNT_RECORDS"
-      ]
+    "formatParams": {
+        "style": "unix",
+        "charset": "utf8",
+        "separator": "\t",
+        "quoteChar": "\"",
+        "escapeChar": "\\",
+        "dateSerializationFormat": "ISO",
+        "arrayMapFormat": "json",
+        "hiveSeparators": [
+            "\u0002",
+            "\u0003",
+            "\u0004",
+            "\u0005",
+            "\u0006",
+            "\u0007",
+            "\b"
+        ],
+        "skipRowsBeforeHeader": 0,
+        "parseHeaderRow": false,
+        "skipRowsAfterHeader": 0,
+        "probableNumberOfRecords": 0,
+        "normalizeBooleans": false,
+        "normalizeDoubles": true,
+        "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+        "readMissingColumnsBehavior": "DISCARD_SILENT",
+        "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+        "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+        "fileReadFailureBehavior": "FAIL",
+        "compress": "gz"
+    },
+    "partitioning": {
+        "ignoreNonMatchingFile": false,
+        "considerMissingRequestedPartitionsAsEmpty": false,
+        "dimensions": []
+    },
+    "versionTag": {
+        "versionNumber": 8,
+        "lastModifiedBy": {
+            "login": "admin"
+        },
+        "lastModifiedOn": 1683653329169
+    },
+    "creationTag": {
+        "versionNumber": 0,
+        "lastModifiedBy": {
+            "login": "justin.davis"
+        },
+        "lastModifiedOn": 1664996346508
+    },
+    "tags": [],
+    "params": {
+        "connection": "SEDEMO",
+        "notReadyIfEmpty": false,
+        "mode": "table",
+        "partitioningType": "custom",
+        "normalizeDoubles": true,
+        "table": "ASSETS_LIABILITIES_EQUITY_${projectKey}",
+        "schema": "PUBLIC",
+        "tableCreationMode": "auto",
+        "writeInsertBatchSize": 10000,
+        "writeJDBCBadDataBehavior": "DISCARD_ROW",
+        "readColsWithUnknownTzAsDates": false,
+        "readSQLDateColsAsDSSDates": true,
+        "sparkJdbcAccess": "NONE",
+        "numPartitions": -1
+    },
+    "schema": {
+        "columns": [
+            {
+                "name": "Year",
+                "type": "string",
+                "comment": "Year",
+                "maxLength": 4194304
+            },
+            {
+                "name": "BU ID",
+                "type": "string",
+                "meaning": "Text",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Cash",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Accounts Receivable",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Inventories",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Fixed Assets",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Goodwill",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Accounts Payable",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Accrued Expenses",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "ST Debt",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "LT Debt",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Shareholder Investment",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Retained Earnings",
+                "type": "string",
+                "meaning": "LongMeaning",
+                "maxLength": 4194304
+            }
+        ],
+        "userModified": true
+    },
+    "dkuProperties": [],
+    "metrics": {
+        "probes": [
+            {
+                "type": "basic",
+                "enabled": true,
+                "computeOnBuildMode": "PARTITION",
+                "meta": {
+                    "name": "Basic data",
+                    "level": 0
+                },
+                "configuration": {}
+            },
+            {
+                "type": "records",
+                "enabled": true,
+                "computeOnBuildMode": "NO",
+                "meta": {
+                    "name": "Record count",
+                    "level": 0
+                },
+                "configuration": {}
+            }
+        ],
+        "engineConfig": {
+            "padRunsWithMetrics": false,
+            "hive": {
+                "active": true,
+                "extraConf": []
+            },
+            "basic": {},
+            "dss": {
+                "active": true,
+                "selection": {
+                    "useMemTable": false,
+                    "filter": {
+                        "distinct": false,
+                        "enabled": false
+                    },
+                    "partitionSelectionMethod": "ALL",
+                    "latestPartitionsN": 1,
+                    "ordering": {
+                        "enabled": false,
+                        "rules": []
+                    },
+                    "samplingMethod": "FULL",
+                    "maxRecords": -1,
+                    "targetRatio": 0.02,
+                    "withinFirstN": -1,
+                    "maxReadUncompressedBytes": -1
+                }
+            },
+            "sql": {
+                "active": true
+            },
+            "impala": {
+                "active": true
+            },
+            "spark": {
+                "active": true,
+                "extraConf": []
+            },
+            "python": {}
+        },
+        "displayedState": {
+            "columns": [],
+            "metrics": [
+                "basic:COUNT_COLUMNS",
+                "records:COUNT_RECORDS"
+            ]
+        }
+    },
+    "metricsChecks": {
+        "checks": [],
+        "displayedState": {
+            "checks": []
+        },
+        "monitor": false
+    },
+    "customFields": {
+        "gdpr_contains_personal_data": "UNSURE"
     }
-  },
-  "metricsChecks": {
-    "runOnBuild": false,
-    "checks": [],
-    "displayedState": {
-      "checks": []
-    }
-  },
-  "customFields": {
-    "gdpr_contains_personal_data": "UNSURE"
-  }
 }

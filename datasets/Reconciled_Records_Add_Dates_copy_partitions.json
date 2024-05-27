@@ -1,183 +1,256 @@
 {
-  "type": "S3",
-  "managed": true,
-  "featureGroup": false,
-  "formatType": "parquet",
-  "checklists": {
-    "checklists": []
-  },
-  "checks": [],
-  "customMeta": {
-    "kv": {}
-  },
-  "flowOptions": {
-    "virtualizable": true,
-    "rebuildBehavior": "NORMAL",
-    "crossProjectBuildBehavior": "DEFAULT"
-  },
-  "readWriteOptions": {
-    "preserveOrder": false,
-    "writeBuckets": 1,
-    "forceSingleOutputFile": false,
-    "defaultReadOrdering": {
-      "enabled": false,
-      "rules": []
-    }
-  },
-  "formatParams": {
-    "parquetLowerCaseIdentifiers": false,
-    "representsNullFields": false,
-    "parquetCompressionMethod": "SNAPPY",
-    "parquetFlavor": "HIVE",
-    "parquetBlockSizeMB": 128
-  },
-  "partitioning": {
-    "filePathPattern": "%Y-%M-%D/.*",
-    "ignoreNonMatchingFile": false,
-    "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": [
-      {
-        "name": "Reconciled Date",
-        "params": {
-          "period": "DAY"
-        },
-        "type": "time"
-      }
-    ]
-  },
-  "versionTag": {
-    "versionNumber": 7,
-    "lastModifiedBy": {
-      "login": "admin"
+    "type": "S3",
+    "managed": true,
+    "featureGroup": false,
+    "formatType": "parquet",
+    "checklists": {
+        "checklists": []
     },
-    "lastModifiedOn": 1683653329327
-  },
-  "creationTag": {
-    "versionNumber": 0,
-    "lastModifiedBy": {
-      "login": "salvatore.ciaravino@dataiku.com"
+    "checks": [],
+    "customMeta": {
+        "kv": {}
     },
-    "lastModifiedOn": 1670884282793
-  },
-  "tags": [],
-  "params": {
-    "bucket": "gis-data-us-east-1",
-    "metastoreSynchronizationEnabled": true,
-    "metastoreDatabaseName": "default",
-    "metastoreTableName": "${projectKey}_Reconciled_Records_Add_Dates_copy_partitions",
-    "connection": "s3-managed",
-    "path": "/managed-dss-data/${projectKey}/Reconciled_Records_Add_Dates_copy_partitions",
-    "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "ALL",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": []
-    }
-  },
-  "schema": {
-    "columns": [
-      {"name":"Year","type":"bigint","comment":"Year"},
-      {"name":"BU ID","type":"string","meaning":"Text","maxLength":4194304},
-      {"name":"Total Assets","type":"bigint","comment":"Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill","meaning":"LongMeaning"},
-      {"name":"Total Liabilities \u0026 Equity","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Cash","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Accounts Receivable","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Inventories","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Fixed Assets","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Goodwill","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Accounts Payable","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Accrued Expenses","type":"bigint","meaning":"LongMeaning"},
-      {"name":"ST Debt","type":"bigint","meaning":"LongMeaning"},
-      {"name":"LT Debt","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Shareholder Investment","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Retained Earnings","type":"bigint","meaning":"LongMeaning"},
-      {"name":"Audit Total Assets","type":"double"},
-      {"name":"Flag_Control_Recon","type":"string","maxLength":4194304},
-      {"name":"Flag_Balance_Recon","type":"string","maxLength":4194304}
-    ],
-    "userModified": true
-  },
-  "dkuProperties": [],
-  "metrics": {
-    "probes": [
-      {
-        "type": "basic",
-        "enabled": true,
-        "computeOnBuildMode": "PARTITION",
-        "meta": {
-          "name": "Basic data",
-          "level": 0
-        },
-        "configuration": {}
-      },
-      {
-        "type": "records",
-        "enabled": true,
-        "computeOnBuildMode": "NO",
-        "meta": {
-          "name": "Record count",
-          "level": 0
-        },
-        "configuration": {}
-      }
-    ],
-    "engineConfig": {
-      "padRunsWithMetrics": false,
-      "hive": {
-        "active": true,
-        "extraConf": []
-      },
-      "basic": {},
-      "dss": {
-        "active": true,
-        "selection": {
-          "useMemTable": false,
-          "filter": {
-            "distinct": false,
-            "enabled": false
-          },
-          "partitionSelectionMethod": "ALL",
-          "latestPartitionsN": 1,
-          "ordering": {
+    "flowOptions": {
+        "virtualizable": true,
+        "rebuildBehavior": "NORMAL",
+        "crossProjectBuildBehavior": "DEFAULT"
+    },
+    "readWriteOptions": {
+        "preserveOrder": false,
+        "writeBuckets": 1,
+        "forceSingleOutputFile": false,
+        "defaultReadOrdering": {
             "enabled": false,
             "rules": []
-          },
-          "samplingMethod": "FULL",
-          "maxRecords": -1,
-          "targetRatio": 0.02,
-          "withinFirstN": -1,
-          "maxReadUncompressedBytes": -1
         }
-      },
-      "sql": {
-        "active": true
-      },
-      "impala": {
-        "active": true
-      },
-      "spark": {
-        "active": true,
-        "extraConf": []
-      },
-      "python": {}
     },
-    "displayedState": {
-      "columns": [],
-      "metrics": [
-        "basic:COUNT_COLUMNS",
-        "basic:COUNT_FILES",
-        "basic:SIZE",
-        "records:COUNT_RECORDS"
-      ]
-    }
-  },
-  "metricsChecks": {
-    "runOnBuild": false,
-    "checks": [],
-    "displayedState": {
-      "checks": []
-    }
-  },
-  "customFields": {}
+    "formatParams": {
+        "parquetLowerCaseIdentifiers": false,
+        "representsNullFields": false,
+        "parquetCompressionMethod": "SNAPPY",
+        "parquetFlavor": "HIVE",
+        "parquetBlockSizeMB": 128
+    },
+    "partitioning": {
+        "filePathPattern": "%Y-%M-%D/.*",
+        "ignoreNonMatchingFile": false,
+        "considerMissingRequestedPartitionsAsEmpty": false,
+        "dimensions": [
+            {
+                "name": "Reconciled Date",
+                "params": {
+                    "period": "DAY"
+                },
+                "type": "time"
+            }
+        ]
+    },
+    "versionTag": {
+        "versionNumber": 7,
+        "lastModifiedBy": {
+            "login": "admin"
+        },
+        "lastModifiedOn": 1683653329327
+    },
+    "creationTag": {
+        "versionNumber": 0,
+        "lastModifiedBy": {
+            "login": "salvatore.ciaravino@dataiku.com"
+        },
+        "lastModifiedOn": 1670884282793
+    },
+    "tags": [],
+    "params": {
+        "bucket": "gis-data-us-east-1",
+        "metastoreSynchronizationEnabled": true,
+        "metastoreDatabaseName": "default",
+        "metastoreTableName": "${projectKey}_Reconciled_Records_Add_Dates_copy_partitions",
+        "connection": "s3-managed",
+        "path": "/managed-dss-data/${projectKey}/Reconciled_Records_Add_Dates_copy_partitions",
+        "notReadyIfEmpty": false,
+        "filesSelectionRules": {
+            "mode": "ALL",
+            "excludeRules": [],
+            "includeRules": [],
+            "explicitFiles": []
+        }
+    },
+    "schema": {
+        "columns": [
+            {
+                "name": "Year",
+                "type": "bigint",
+                "comment": "Year"
+            },
+            {
+                "name": "BU ID",
+                "type": "string",
+                "meaning": "Text",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Total Assets",
+                "type": "bigint",
+                "comment": "Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Total Liabilities & Equity",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Cash",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Accounts Receivable",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Inventories",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Fixed Assets",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Goodwill",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Accounts Payable",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Accrued Expenses",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "ST Debt",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "LT Debt",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Shareholder Investment",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Retained Earnings",
+                "type": "bigint",
+                "meaning": "LongMeaning"
+            },
+            {
+                "name": "Audit Total Assets",
+                "type": "double"
+            },
+            {
+                "name": "Flag_Control_Recon",
+                "type": "string",
+                "maxLength": 4194304
+            },
+            {
+                "name": "Flag_Balance_Recon",
+                "type": "string",
+                "maxLength": 4194304
+            }
+        ],
+        "userModified": true
+    },
+    "dkuProperties": [],
+    "metrics": {
+        "probes": [
+            {
+                "type": "basic",
+                "enabled": true,
+                "computeOnBuildMode": "PARTITION",
+                "meta": {
+                    "name": "Basic data",
+                    "level": 0
+                },
+                "configuration": {}
+            },
+            {
+                "type": "records",
+                "enabled": true,
+                "computeOnBuildMode": "NO",
+                "meta": {
+                    "name": "Record count",
+                    "level": 0
+                },
+                "configuration": {}
+            }
+        ],
+        "engineConfig": {
+            "padRunsWithMetrics": false,
+            "hive": {
+                "active": true,
+                "extraConf": []
+            },
+            "basic": {},
+            "dss": {
+                "active": true,
+                "selection": {
+                    "useMemTable": false,
+                    "filter": {
+                        "distinct": false,
+                        "enabled": false
+                    },
+                    "partitionSelectionMethod": "ALL",
+                    "latestPartitionsN": 1,
+                    "ordering": {
+                        "enabled": false,
+                        "rules": []
+                    },
+                    "samplingMethod": "FULL",
+                    "maxRecords": -1,
+                    "targetRatio": 0.02,
+                    "withinFirstN": -1,
+                    "maxReadUncompressedBytes": -1
+                }
+            },
+            "sql": {
+                "active": true
+            },
+            "impala": {
+                "active": true
+            },
+            "spark": {
+                "active": true,
+                "extraConf": []
+            },
+            "python": {}
+        },
+        "displayedState": {
+            "columns": [],
+            "metrics": [
+                "basic:COUNT_COLUMNS",
+                "basic:COUNT_FILES",
+                "basic:SIZE",
+                "records:COUNT_RECORDS"
+            ]
+        }
+    },
+    "metricsChecks": {
+        "checks": [],
+        "displayedState": {
+            "checks": []
+        },
+        "monitor": false
+    },
+    "customFields": {}
 }

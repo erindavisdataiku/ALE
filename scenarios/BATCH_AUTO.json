@@ -1,135 +1,135 @@
 {
-  "type": "step_based",
-  "name": "batch_auto",
   "active": false,
-  "runAsUser": "qxue",
-  "creationTag": {
-    "versionNumber": 5,
-    "lastModifiedBy": {
-      "login": "sal.ciaravino"
-    },
-    "lastModifiedOn": 1665610426958
-  },
-  "versionTag": {
-    "versionNumber": 5,
-    "lastModifiedBy": {
-      "login": "sal.ciaravino"
-    },
-    "lastModifiedOn": 1665610426958
-  },
+  "automationLocal": false,
   "checklists": {
     "checklists": []
   },
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "sal.ciaravino"
+    },
+    "lastModifiedOn": 1665610426958,
+    "versionNumber": 5
+  },
+  "customFields": {},
   "delayedTriggersBehavior": {
     "delayWhileRunning": true,
     "squashDelayedTriggers": true,
     "suppressTriggersWhileRunning": true
   },
-  "tags": [],
-  "triggers": [
-    {
-      "id": "WsFprea3",
-      "type": "temporal",
-      "name": "Time-based",
-      "delay": 5,
-      "active": false,
-      "params": {
-        "repeatFrequency": 1,
-        "frequency": "Monthly",
-        "startingFrom": "2022-10-12T21:31:00.000Z",
-        "daysOfWeek": [
-          "Wednesday"
-        ],
-        "monthlyRunOn": "ON_THE_DAY",
-        "minute": 31,
-        "hour": 17,
-        "timezone": "SERVER",
-        "lastUpdate": 0
-      }
-    }
-  ],
-  "reporters": [
-    {
-      "active": false,
-      "messaging": {
-        "type": "mail-scenario",
-        "configuration": {
-          "subject": "DSS scenario ${scenarioName}: ${outcome}",
-          "sendAsHTML": false,
-          "attachments": [
-            {
-              "type": "FOLDER",
-              "params": {
-                "attachedFolderId": "0h9QUF1p"
-              }
-            }
-          ],
-          "messageSource": "TEMPLATE_FILE",
-          "templateFormat": "FREEMARKER",
-          "templateName": "default.ftl"
-        }
-      },
-      "id": "ZiRGHTm1",
-      "runConditionEnabled": true,
-      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
-      "phase": "END"
-    }
-  ],
+  "name": "batch_auto",
   "params": {
     "steps": [
       {
-        "id": "comp_metrics_d_Audit_Assets_Liabilities_Equity",
-        "type": "compute_metrics",
-        "name": "on Joined data",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
-        "runConditionStatuses": [
-          "SUCCESS",
-          "WARNING"
-        ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
         "delayBetweenRetries": 10,
+        "id": "comp_metrics_d_Audit_Assets_Liabilities_Equity",
         "maxRetriesOnFail": 0,
+        "name": "on Joined data",
         "params": {
           "computes": [
             {
-              "type": "DATASET",
               "itemId": "Audit_Assets_Liabilities_Equity",
-              "partitionsSpec": ""
+              "partitionsSpec": "",
+              "type": "DATASET"
             }
           ],
           "proceedOnFailure": false
-        }
-      },
-      {
-        "id": "build_2_true_f_0h9QUF1p",
-        "type": "build_flowitem",
-        "name": "Recon Output",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
         "runConditionStatuses": [
           "SUCCESS",
           "WARNING"
         ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "compute_metrics"
+      },
+      {
         "delayBetweenRetries": 10,
+        "id": "build_2_true_f_0h9QUF1p",
         "maxRetriesOnFail": 0,
+        "name": "Recon Output",
         "params": {
           "builds": [
             {
-              "type": "MANAGED_FOLDER",
               "itemId": "0h9QUF1p",
-              "partitionsSpec": ""
+              "partitionsSpec": "",
+              "type": "MANAGED_FOLDER"
             }
           ],
-          "jobType": "RECURSIVE_FORCED_BUILD",
-          "refreshHiveMetastore": true,
           "handleWarningsAs": "WARNING",
-          "proceedOnFailure": false
-        }
+          "jobType": "RECURSIVE_FORCED_BUILD",
+          "proceedOnFailure": false,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
+        "runConditionStatuses": [
+          "SUCCESS",
+          "WARNING"
+        ],
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
       }
     ]
   },
-  "automationLocal": false,
-  "customFields": {}
+  "reporters": [
+    {
+      "active": false,
+      "id": "ZiRGHTm1",
+      "messaging": {
+        "configuration": {
+          "attachments": [
+            {
+              "params": {
+                "attachedFolderId": "0h9QUF1p"
+              },
+              "type": "FOLDER"
+            }
+          ],
+          "messageSource": "TEMPLATE_FILE",
+          "sendAsHTML": false,
+          "subject": "DSS scenario ${scenarioName}: ${outcome}",
+          "templateFormat": "FREEMARKER",
+          "templateName": "default.ftl"
+        },
+        "type": "mail-scenario"
+      },
+      "phase": "END",
+      "runCondition": "outcome != 'SUCCESS'",
+      "runConditionEnabled": true
+    }
+  ],
+  "runAsUser": "qxue",
+  "tags": [],
+  "triggers": [
+    {
+      "active": false,
+      "delay": 5,
+      "id": "WsFprea3",
+      "name": "Time-based",
+      "params": {
+        "daysOfWeek": [
+          "Wednesday"
+        ],
+        "frequency": "Monthly",
+        "hour": 17,
+        "lastUpdate": 0,
+        "minute": 31,
+        "monthlyRunOn": "ON_THE_DAY",
+        "repeatFrequency": 1,
+        "startingFrom": "2022-10-12",
+        "timezone": "SERVER"
+      },
+      "type": "temporal"
+    }
+  ],
+  "type": "step_based",
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "sal.ciaravino"
+    },
+    "lastModifiedOn": 1665610426958,
+    "versionNumber": 5
+  }
 }

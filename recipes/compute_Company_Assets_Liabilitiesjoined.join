@@ -1,28 +1,54 @@
 {
+  "computedColumns": [],
+  "enableAutoCastInJoinConditions": false,
+  "engineParams": {
+    "hive": {
+      "addDkuUdf": false,
+      "executionEngine": "HIVESERVER2",
+      "hiveconf": [],
+      "inheritConf": "default",
+      "skipPrerunValidate": false
+    },
+    "impala": {
+      "forceStreamMode": true
+    },
+    "lowerCaseSchemaIfEngineRequiresIt": true,
+    "sparkSQL": {
+      "executionEngine": "SPARK_SUBMIT",
+      "overwriteOutputSchema": false,
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true,
+      "readParams": {
+        "autoModeRepartitionInto": 10,
+        "map": {},
+        "mode": "AUTO"
+      },
+      "skipPrerunValidate": false,
+      "sparkConfig": {
+        "conf": [],
+        "inheritConf": "default"
+      },
+      "useGlobalMetastore": false
+    },
+    "sqlPipelineParams": {
+      "pipelineAllowMerge": true,
+      "pipelineAllowStart": true
+    }
+  },
   "joins": [
     {
-      "table2": 1,
-      "table1": 0,
       "conditionsMode": "AND",
-      "rightLimit": {
-        "decisionColumn": {},
-        "maxMatches": 1,
-        "type": "KEEP_LARGEST",
-        "enabled": false
-      },
-      "type": "INNER",
-      "outerJoinOnTheLeft": true,
       "on": [
         {
           "column1": {
             "name": "BU ID",
             "table": 0
           },
-          "dateDiffUnit": "SECOND",
           "column2": {
             "name": "BU ID",
             "table": 1
           },
+          "dateDiffUnit": "SECOND",
           "type": "EQ"
         },
         {
@@ -30,200 +56,176 @@
             "name": "Year",
             "table": 0
           },
-          "dateDiffUnit": "SECOND",
           "column2": {
             "name": "Year",
             "table": 1
           },
+          "dateDiffUnit": "SECOND",
           "type": "EQ"
         }
-      ]
-    }
-  ],
-  "selectedColumns": [
-    {
-      "name": "Year",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "BU ID",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "Cash",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "Accounts Receivable",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "Inventories",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "Fixed Assets",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "Goodwill",
-      "type": "string",
-      "table": 0
-    },
-    {
-      "name": "Accounts Payable",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "Accrued Expenses",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "ST Debt",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "LT Debt",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "Shareholder Investment",
-      "type": "string",
-      "table": 1
-    },
-    {
-      "name": "Retained Earnings",
-      "type": "string",
-      "table": 1
-    }
-  ],
-  "resolvedSelectedColumns": [],
-  "engineParams": {
-    "hive": {
-      "skipPrerunValidate": false,
-      "hiveconf": [],
-      "inheritConf": "default",
-      "addDkuUdf": false,
-      "executionEngine": "HIVESERVER2"
-    },
-    "sqlPipelineParams": {
-      "pipelineAllowMerge": true,
-      "pipelineAllowStart": true
-    },
-    "impala": {
-      "forceStreamMode": true
-    },
-    "lowerCaseSchemaIfEngineRequiresIt": true,
-    "sparkSQL": {
-      "skipPrerunValidate": false,
-      "pipelineAllowMerge": true,
-      "useGlobalMetastore": false,
-      "pipelineAllowStart": true,
-      "readParams": {
-        "mode": "AUTO",
-        "autoModeRepartitionInto": 10,
-        "map": {}
+      ],
+      "outerJoinOnTheLeft": true,
+      "rightLimit": {
+        "decisionColumn": {},
+        "enabled": false,
+        "maxMatches": 1,
+        "type": "KEEP_LARGEST"
       },
-      "overwriteOutputSchema": false,
-      "executionEngine": "SPARK_SUBMIT",
-      "sparkConfig": {
-        "inheritConf": "default",
-        "conf": []
-      }
-    }
-  },
-  "virtualInputs": [
-    {
-      "index": 0
-    },
-    {
-      "index": 1
+      "table1": 0,
+      "table2": 1,
+      "type": "INNER"
     }
   ],
-  "computedColumns": [],
   "postFilter": {
     "$status": {
       "schema": {
         "columns": [
           {
+            "maxLength": 4194304,
             "name": "Year",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "BU ID",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Cash",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Accounts Receivable",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Inventories",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Fixed Assets",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Goodwill",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Accounts Payable",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Accrued Expenses",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "ST Debt",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "LT Debt",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Shareholder Investment",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           },
           {
+            "maxLength": 4194304,
             "name": "Retained Earnings",
-            "type": "string",
-            "maxLength": 4194304
+            "type": "string"
           }
         ],
         "userModified": false
       }
     }
   },
-  "enableAutoCastInJoinConditions": false
+  "resolvedSelectedColumns": [],
+  "selectedColumns": [
+    {
+      "name": "Year",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "BU ID",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "Cash",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "Accounts Receivable",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "Inventories",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "Fixed Assets",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "Goodwill",
+      "table": 0,
+      "type": "string"
+    },
+    {
+      "name": "Accounts Payable",
+      "table": 1,
+      "type": "string"
+    },
+    {
+      "name": "Accrued Expenses",
+      "table": 1,
+      "type": "string"
+    },
+    {
+      "name": "ST Debt",
+      "table": 1,
+      "type": "string"
+    },
+    {
+      "name": "LT Debt",
+      "table": 1,
+      "type": "string"
+    },
+    {
+      "name": "Shareholder Investment",
+      "table": 1,
+      "type": "string"
+    },
+    {
+      "name": "Retained Earnings",
+      "table": 1,
+      "type": "string"
+    }
+  ],
+  "virtualInputs": [
+    {
+      "index": 0,
+      "outputColumnsSelectionMode": "MANUAL"
+    },
+    {
+      "index": 1,
+      "outputColumnsSelectionMode": "MANUAL"
+    }
+  ]
 }

@@ -1,162 +1,184 @@
 {
-  "type": "FilesInFolder",
-  "managed": false,
-  "featureGroup": false,
-  "formatType": "excel",
-  "checklists": {
-    "checklists": []
-  },
-  "checks": [],
-  "customMeta": {
-    "kv": {}
-  },
-  "flowOptions": {
-    "virtualizable": false,
-    "rebuildBehavior": "NORMAL",
-    "crossProjectBuildBehavior": "DEFAULT"
-  },
-  "readWriteOptions": {
-    "preserveOrder": false,
-    "writeBuckets": 1,
-    "forceSingleOutputFile": false,
-    "defaultReadOrdering": {
-      "enabled": false,
-      "rules": []
-    }
-  },
-  "formatParams": {
-    "xlsx": true,
-    "preserveNumberFormatting": false,
-    "parseDatesToISO": false,
-    "skipRowsBeforeHeader": 0,
-    "parseHeaderRow": true,
-    "skipRowsAfterHeader": 0,
-    "sheets": "*Sheet1"
-  },
-  "partitioning": {
-    "ignoreNonMatchingFile": false,
-    "considerMissingRequestedPartitionsAsEmpty": false,
-    "dimensions": []
-  },
-  "versionTag": {
-    "versionNumber": 1,
-    "lastModifiedBy": {
-      "login": "admin"
+    "type": "FilesInFolder",
+    "managed": false,
+    "featureGroup": false,
+    "formatType": "excel",
+    "checklists": {
+        "checklists": []
     },
-    "lastModifiedOn": 1683653329397
-  },
-  "creationTag": {
-    "versionNumber": 0,
-    "lastModifiedBy": {
-      "login": "walid.elkara@dataiku.com"
+    "checks": [],
+    "customMeta": {
+        "kv": {}
     },
-    "lastModifiedOn": 1670950697449
-  },
-  "tags": [],
-  "params": {
-    "folderSmartId": "QGGgOlvG",
-    "notReadyIfEmpty": false,
-    "filesSelectionRules": {
-      "mode": "EXPLICIT_SELECT_FILES",
-      "excludeRules": [],
-      "includeRules": [],
-      "explicitFiles": [
-        "Assets_111022.xlsx"
-      ]
-    }
-  },
-  "schema": {
-    "columns": [
-      {"name":"Year","type":"string","comment":"Year"},
-      {"name":"BU ID","type":"string"},
-      {"name":"Cash","type":"string"},
-      {"name":"Accounts Receivable","type":"string"},
-      {"name":"Inventories","type":"string"},
-      {"name":"Fixed Assets","type":"string"},
-      {"name":"Goodwill","type":"string"}
-    ],
-    "userModified": true
-  },
-  "dkuProperties": [],
-  "metrics": {
-    "probes": [
-      {
-        "type": "basic",
-        "enabled": true,
-        "computeOnBuildMode": "PARTITION",
-        "meta": {
-          "name": "Basic data",
-          "level": 0
-        },
-        "configuration": {}
-      },
-      {
-        "type": "records",
-        "enabled": true,
-        "computeOnBuildMode": "NO",
-        "meta": {
-          "name": "Record count",
-          "level": 0
-        },
-        "configuration": {}
-      }
-    ],
-    "engineConfig": {
-      "padRunsWithMetrics": false,
-      "hive": {
-        "active": true,
-        "extraConf": []
-      },
-      "basic": {},
-      "dss": {
-        "active": true,
-        "selection": {
-          "useMemTable": false,
-          "filter": {
-            "distinct": false,
-            "enabled": false
-          },
-          "partitionSelectionMethod": "ALL",
-          "latestPartitionsN": 1,
-          "ordering": {
+    "flowOptions": {
+        "virtualizable": false,
+        "rebuildBehavior": "NORMAL",
+        "crossProjectBuildBehavior": "DEFAULT"
+    },
+    "readWriteOptions": {
+        "preserveOrder": false,
+        "writeBuckets": 1,
+        "forceSingleOutputFile": false,
+        "defaultReadOrdering": {
             "enabled": false,
             "rules": []
-          },
-          "samplingMethod": "FULL",
-          "maxRecords": -1,
-          "targetRatio": 0.02,
-          "withinFirstN": -1,
-          "maxReadUncompressedBytes": -1
         }
-      },
-      "sql": {
-        "active": true
-      },
-      "impala": {
-        "active": true
-      },
-      "spark": {
-        "active": true,
-        "extraConf": []
-      },
-      "python": {}
     },
-    "displayedState": {
-      "columns": [],
-      "metrics": [
-        "basic:COUNT_COLUMNS",
-        "basic:COUNT_FILES",
-        "basic:SIZE",
-        "records:COUNT_RECORDS"
-      ]
-    }
-  },
-  "metricsChecks": {
-    "runOnBuild": false,
-    "checks": [],
-    "displayedState": {
-      "checks": []
-    }
-  },
-  "customFields": {}
+    "formatParams": {
+        "xlsx": true,
+        "preserveNumberFormatting": false,
+        "parseDatesToISO": false,
+        "skipRowsBeforeHeader": 0,
+        "parseHeaderRow": true,
+        "skipRowsAfterHeader": 0,
+        "sheets": "*Sheet1"
+    },
+    "partitioning": {
+        "ignoreNonMatchingFile": false,
+        "considerMissingRequestedPartitionsAsEmpty": false,
+        "dimensions": []
+    },
+    "versionTag": {
+        "versionNumber": 1,
+        "lastModifiedBy": {
+            "login": "admin"
+        },
+        "lastModifiedOn": 1683653329397
+    },
+    "creationTag": {
+        "versionNumber": 0,
+        "lastModifiedBy": {
+            "login": "walid.elkara@dataiku.com"
+        },
+        "lastModifiedOn": 1670950697449
+    },
+    "tags": [],
+    "params": {
+        "folderSmartId": "QGGgOlvG",
+        "notReadyIfEmpty": false,
+        "filesSelectionRules": {
+            "mode": "EXPLICIT_SELECT_FILES",
+            "excludeRules": [],
+            "includeRules": [],
+            "explicitFiles": [
+                "Assets_111022.xlsx"
+            ]
+        }
+    },
+    "schema": {
+        "columns": [
+            {
+                "name": "Year",
+                "type": "string",
+                "comment": "Year"
+            },
+            {
+                "name": "BU ID",
+                "type": "string"
+            },
+            {
+                "name": "Cash",
+                "type": "string"
+            },
+            {
+                "name": "Accounts Receivable",
+                "type": "string"
+            },
+            {
+                "name": "Inventories",
+                "type": "string"
+            },
+            {
+                "name": "Fixed Assets",
+                "type": "string"
+            },
+            {
+                "name": "Goodwill",
+                "type": "string"
+            }
+        ],
+        "userModified": true
+    },
+    "dkuProperties": [],
+    "metrics": {
+        "probes": [
+            {
+                "type": "basic",
+                "enabled": true,
+                "computeOnBuildMode": "PARTITION",
+                "meta": {
+                    "name": "Basic data",
+                    "level": 0
+                },
+                "configuration": {}
+            },
+            {
+                "type": "records",
+                "enabled": true,
+                "computeOnBuildMode": "NO",
+                "meta": {
+                    "name": "Record count",
+                    "level": 0
+                },
+                "configuration": {}
+            }
+        ],
+        "engineConfig": {
+            "padRunsWithMetrics": false,
+            "hive": {
+                "active": true,
+                "extraConf": []
+            },
+            "basic": {},
+            "dss": {
+                "active": true,
+                "selection": {
+                    "useMemTable": false,
+                    "filter": {
+                        "distinct": false,
+                        "enabled": false
+                    },
+                    "partitionSelectionMethod": "ALL",
+                    "latestPartitionsN": 1,
+                    "ordering": {
+                        "enabled": false,
+                        "rules": []
+                    },
+                    "samplingMethod": "FULL",
+                    "maxRecords": -1,
+                    "targetRatio": 0.02,
+                    "withinFirstN": -1,
+                    "maxReadUncompressedBytes": -1
+                }
+            },
+            "sql": {
+                "active": true
+            },
+            "impala": {
+                "active": true
+            },
+            "spark": {
+                "active": true,
+                "extraConf": []
+            },
+            "python": {}
+        },
+        "displayedState": {
+            "columns": [],
+            "metrics": [
+                "basic:COUNT_COLUMNS",
+                "basic:COUNT_FILES",
+                "basic:SIZE",
+                "records:COUNT_RECORDS"
+            ]
+        }
+    },
+    "metricsChecks": {
+        "checks": [],
+        "displayedState": {
+            "checks": []
+        },
+        "monitor": false
+    },
+    "customFields": {}
 }

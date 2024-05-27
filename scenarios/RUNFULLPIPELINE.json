@@ -1,104 +1,104 @@
 {
-  "type": "step_based",
-  "name": "Run Full Pipeline",
   "active": false,
-  "runAsUser": "admin",
-  "creationTag": {
-    "versionNumber": 5,
-    "lastModifiedBy": {
-      "login": "walid.elkara@dataiku.com"
-    },
-    "lastModifiedOn": 1666789420349
-  },
-  "versionTag": {
-    "versionNumber": 6,
-    "lastModifiedBy": {
-      "login": "admin"
-    },
-    "lastModifiedOn": 1683555567447
-  },
+  "automationLocal": false,
   "checklists": {
     "checklists": []
   },
+  "creationTag": {
+    "lastModifiedBy": {
+      "login": "walid.elkara@dataiku.com"
+    },
+    "lastModifiedOn": 1666789420349,
+    "versionNumber": 5
+  },
+  "customFields": {},
   "delayedTriggersBehavior": {
     "delayWhileRunning": true,
     "squashDelayedTriggers": true,
     "suppressTriggersWhileRunning": true
   },
-  "tags": [],
-  "triggers": [
-    {
-      "id": "P9EYhX8G",
-      "type": "temporal",
-      "name": "Time-based",
-      "delay": 5,
-      "active": false,
-      "params": {
-        "repeatFrequency": 1,
-        "frequency": "Hourly",
-        "startingFrom": "2022-10-18T21:38:00.000Z",
-        "daysOfWeek": [
-          "Tuesday"
-        ],
-        "monthlyRunOn": "ON_THE_DAY",
-        "minute": 38,
-        "hour": 17,
-        "timezone": "SERVER",
-        "lastUpdate": 1683555567447
-      }
-    }
-  ],
-  "reporters": [
-    {
-      "active": false,
-      "messaging": {
-        "type": "mail-scenario",
-        "configuration": {
-          "subject": "DSS scenario ${scenarioName}: ${outcome}",
-          "sendAsHTML": false,
-          "attachments": [],
-          "messageSource": "TEMPLATE_FILE",
-          "templateFormat": "FREEMARKER",
-          "templateName": "default.ftl"
-        }
-      },
-      "id": "LIl36F4r",
-      "runConditionEnabled": true,
-      "runCondition": "outcome !\u003d \u0027SUCCESS\u0027",
-      "phase": "END"
-    }
-  ],
+  "name": "Run Full Pipeline",
   "params": {
     "steps": [
       {
+        "delayBetweenRetries": 10,
         "id": "build_0_true_f_0h9QUF1p",
-        "type": "build_flowitem",
+        "maxRetriesOnFail": 0,
         "name": "Step #1",
-        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "params": {
+          "builds": [
+            {
+              "itemId": "0h9QUF1p",
+              "partitionsSpec": "",
+              "type": "MANAGED_FOLDER"
+            }
+          ],
+          "handleWarningsAs": "WARNING",
+          "jobType": "RECURSIVE_BUILD",
+          "proceedOnFailure": false,
+          "refreshHiveMetastore": true
+        },
+        "resetScenarioStatus": false,
+        "runConditionExpression": "",
         "runConditionStatuses": [
           "SUCCESS",
           "WARNING"
         ],
-        "runConditionExpression": "",
-        "resetScenarioStatus": false,
-        "delayBetweenRetries": 10,
-        "maxRetriesOnFail": 0,
-        "params": {
-          "builds": [
-            {
-              "type": "MANAGED_FOLDER",
-              "itemId": "0h9QUF1p",
-              "partitionsSpec": ""
-            }
-          ],
-          "jobType": "RECURSIVE_BUILD",
-          "refreshHiveMetastore": true,
-          "handleWarningsAs": "WARNING",
-          "proceedOnFailure": false
-        }
+        "runConditionType": "RUN_IF_STATUS_MATCH",
+        "type": "build_flowitem"
       }
     ]
   },
-  "automationLocal": false,
-  "customFields": {}
+  "reporters": [
+    {
+      "active": false,
+      "id": "LIl36F4r",
+      "messaging": {
+        "configuration": {
+          "attachments": [],
+          "messageSource": "TEMPLATE_FILE",
+          "sendAsHTML": false,
+          "subject": "DSS scenario ${scenarioName}: ${outcome}",
+          "templateFormat": "FREEMARKER",
+          "templateName": "default.ftl"
+        },
+        "type": "mail-scenario"
+      },
+      "phase": "END",
+      "runCondition": "outcome != 'SUCCESS'",
+      "runConditionEnabled": true
+    }
+  ],
+  "runAsUser": "admin",
+  "tags": [],
+  "triggers": [
+    {
+      "active": false,
+      "delay": 5,
+      "id": "P9EYhX8G",
+      "name": "Time-based",
+      "params": {
+        "daysOfWeek": [
+          "Tuesday"
+        ],
+        "frequency": "Hourly",
+        "hour": 17,
+        "lastUpdate": 1683555567447,
+        "minute": 38,
+        "monthlyRunOn": "ON_THE_DAY",
+        "repeatFrequency": 1,
+        "startingFrom": "2022-10-18",
+        "timezone": "SERVER"
+      },
+      "type": "temporal"
+    }
+  ],
+  "type": "step_based",
+  "versionTag": {
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1683555567447,
+    "versionNumber": 6
+  }
 }
