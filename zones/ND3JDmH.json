@@ -23,10 +23,6 @@
       "objectType": "RECIPE"
     },
     {
-      "objectId": "Audit",
-      "objectType": "DATASET"
-    },
-    {
       "objectId": "compute_Assets_Liabilities_Equity_prep_joined",
       "objectType": "RECIPE"
     },
