@@ -41,6 +41,14 @@
     {
       "objectId": "Audit_Local_copy",
       "objectType": "DATASET"
+    },
+    {
+      "objectId": "compute_Assets_Liabilities_Equity_prep_joined",
+      "objectType": "RECIPE"
+    },
+    {
+      "objectId": "Assets_Liabilities_Equity_prep_joined",
+      "objectType": "DATASET"
     }
   ],
   "shared": [],
