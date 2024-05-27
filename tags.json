@@ -24,6 +24,7 @@
     "Feature:Dashboards": {},
     "Persona:Line of Business Leader": {},
     "Feature:Plugins": {},
-    "finance": {}
+    "finance": {},
+    "recipe-editor": {}
   }
 }
