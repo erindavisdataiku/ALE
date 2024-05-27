@@ -113,6 +113,7 @@
               "col": "Total Assets",
               "$appliesTo": "value",
               "string": "Y",
+              "$showList": false,
               "num": 0,
               "$label": "Contains",
               "operator": "contains"
@@ -122,6 +123,7 @@
               "col": "Total Assets",
               "$appliesTo": "value",
               "string": "Y",
+              "$showList": false,
               "num": 0,
               "$label": "Contains",
               "operator": "contains"
@@ -133,6 +135,7 @@
             "columns": [
               {
                 "name": "Year",
+                "comment": "Year",
                 "type": "string",
                 "maxLength": 4194304
               },
@@ -145,6 +148,7 @@
               {
                 "meaning": "LongMeaning",
                 "name": "Total Assets",
+                "comment": "Sum of Cash, Accounts Receivable, Inventories, Fixed Assets and Goodwill",
                 "type": "bigint"
               },
               {
