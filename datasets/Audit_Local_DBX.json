@@ -57,8 +57,8 @@
   "schema": {
     "columns": [
       {"name":"Year","type":"string","maxLength":65500},
-      {"name":"BU ID","type":"string","maxLength":65500},
-      {"name":"Total Assets","type":"string","maxLength":65500}
+      {"name":"BU_ID","type":"string","maxLength":65500},
+      {"name":"Total_Assets","type":"string","maxLength":65500}
     ],
     "userModified": true
   },
